@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "eymC3qYGM2s/b4UD8sdIuny99v0vMbE9vlYGrpro+g4=",
+  "Source": "erpapi",
+  "BasePath": "_content/erpapi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
