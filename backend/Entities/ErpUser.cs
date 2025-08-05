@@ -23,6 +23,7 @@ namespace Entities
 
         public bool RememberMe { get; set; } = false;
 
+
         public string FullName => $"{FirstName} {LastName}".Trim();
 
 

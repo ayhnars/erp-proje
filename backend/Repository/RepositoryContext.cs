@@ -11,6 +11,6 @@ namespace Repository
         {
         }
 
-        // Add DbSet properties for your entities here
-    }
+        public DbSet<Modules> Modules { get; set; }
+        }
 }
