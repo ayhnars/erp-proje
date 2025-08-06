@@ -7,13 +7,20 @@ namespace Entities
     public class ErpUser : IdentityUser
     {
 
-        //Telefon numarası ve E-posta IdentityUser tarafından sağlanıyor.
+        public ErpUser()
+        {
+            if (!string.IsNullOrWhiteSpace(Email))
+            {
+                UserName = Email;
+            }
+        }
 
+        //Telefon numarası ve E-posta IdentityUser tarafından sağlanıyor.
         public string FirstName { get; set; } = string.Empty;
 
         public string LastName { get; set; } = string.Empty;
 
-        public string InstitutionName { get; set; } = string.Empty;
+        public string? CompanyName { get; set; } = string.Empty;
 
         public string? RegistrationKey { get; set; }
 
@@ -23,7 +30,9 @@ namespace Entities
 
         public bool RememberMe { get; set; } = false;
 
+
         public string FullName => $"{FirstName} {LastName}".Trim();
+
 
 
     }

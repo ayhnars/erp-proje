@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Services.Contrats;
 
 namespace ErpApi.Controllers
 {
@@ -6,29 +7,17 @@ namespace ErpApi.Controllers
     [Route("api/[controller]")]
     public class AccountController : ControllerBase
     {
-        // POST: api/Account/Register
-        [HttpPost("register")]
-        public IActionResult Register()
+        private readonly IAuthManager _authManager;
+
+        public AccountController(IAuthManager authManager)
         {
-            // TODO: Add registration logic
-            return Ok(new { message = "Registration successful." });
+            _authManager = authManager;
         }
 
-        // POST: api/Account/Login
-        [HttpPost("login")]
-        public IActionResult Login()
+        [HttpGet("roles")]
+        public IActionResult GetRoles()
         {
-            // Kodları Ekleyin
-            return Ok(new { token = "dummy-jwt-token" });
-        }
-
-        // POST: api/Account/ForgotPassword
-        [HttpPost("forgotpassword")]
-        public IActionResult ForgotPassword()
-        {
-            // Kodları Ekleyin
-            return Ok(new { message = "Password reset link sent." });
+            return Ok(_authManager.Roles);
         }
     }
-
 }
