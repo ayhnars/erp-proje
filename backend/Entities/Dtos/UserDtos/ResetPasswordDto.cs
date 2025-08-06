@@ -4,7 +4,10 @@ namespace Entities.Dtos
 {
     public class ResetPasswordDto
     {
-        public String? UserName { get; init; }
+
+        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "Password is required.")]
+        public String? Email { get; init; }
 
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Password is required.")]

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Repository
 {
-    public abstract class RepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         protected DbContext RepositoryContext { get; set; }
 

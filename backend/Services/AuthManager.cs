@@ -12,7 +12,6 @@ namespace Services
         private readonly UserManager<ErpUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
-        private readonly ILogger<AuthManager> _logger;
 
         public AuthManager(UserManager<ErpUser> userManager,
                            RoleManager<IdentityRole> roleManager,
@@ -22,7 +21,6 @@ namespace Services
             _userManager = userManager;
             _roleManager = roleManager;
             _mapper = mapper;
-            _logger = logger;
         }
 
         public IEnumerable<IdentityRole> Roles => _roleManager.Roles;
@@ -58,7 +56,7 @@ namespace Services
 
         public async Task Update(ErpUserDtoForUpdate userDto)
         {
-            var user = await _userManager.FindByNameAsync(userDto.UserName);
+            var user = await _userManager.FindByNameAsync(userDto.Name);
             if (user == null) return;
 
             _mapper.Map(userDto, user);
@@ -67,12 +65,12 @@ namespace Services
 
         public async Task<IdentityResult> ResetPassword(ResetPasswordDto model)
         {
-            var user = await _userManager.FindByNameAsync(model.UserName);
+            var user = await _userManager.FindByNameAsync(model.Email);
             if (user == null)
                 return IdentityResult.Failed(new IdentityError { Description = "Kullanıcı bulunamadı." });
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            return await _userManager.ResetPasswordAsync(user, token, model.NewPassword);
+            return await _userManager.ResetPasswordAsync(user, token, model.ConfirmPassword);
         }
 
         public async Task<IdentityResult> DeleteOneUser(string userName)
