@@ -8,12 +8,11 @@ namespace Entities
     {
 
         //Telefon numarası ve E-posta IdentityUser tarafından sağlanıyor.
-
         public string FirstName { get; set; } = string.Empty;
 
         public string LastName { get; set; } = string.Empty;
 
-        public string InstitutionName { get; set; } = string.Empty;
+        public string? InstitutionName { get; set; } = string.Empty;
 
         public string? RegistrationKey { get; set; }
 

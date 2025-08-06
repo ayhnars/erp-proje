@@ -1,16 +1,17 @@
-using System.Threading.Tasks;
+using Entities;
 using Entities.Dtos;
+using Microsoft.AspNetCore.Identity;
 
 namespace Services.Contrats
 {
     public interface IAuthManager
-    { 
-        IEnumerable<IdentityRole> Roles { get;}
-        IEnumerable<IdentityUser> GetAllUsers();
-        Task<IdentityUser> GetOneUser(string userName);
-        Task<UserDtoForUpdate> GetOneUserForUpdate(string userName);
+    {
+        IEnumerable<IdentityRole> Roles { get; }
+        IEnumerable<ErpUser> GetAllUsers();
+        Task<ErpUser> GetOneUser(string userName);
+        Task<ErpUserDtoForUpdate> GetOneUserForUpdate(string userName);
         Task<IdentityResult> CreateUser(ErpUserDtoforRegister userDto);
-        Task Update(UserDtoForUpdate userDto);
+        Task Update(ErpUserDtoForUpdate userDto);
         Task<IdentityResult> ResetPassword(ResetPasswordDto model);
         Task<IdentityResult> DeleteOneUser(string userName);
     }

@@ -9,6 +9,7 @@ namespace erpapi.Infrastructure.Mapper
         public Mapping()
         {
             CreateMap<ErpUser, ErpUserForUpdate>();
+            CreateMap<ErpUser, ErpUserForUpdate>().ReverseMap();
             CreateMap<ErpUserDtoforRegister, ErpUser>();
             CreateMap<ErpUserDtoForLogin, ErpUser>();
         }
