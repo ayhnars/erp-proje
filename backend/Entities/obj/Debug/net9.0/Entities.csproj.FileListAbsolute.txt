@@ -1,0 +1,13 @@
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\bin\Debug\net9.0\Entities.deps.json
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\bin\Debug\net9.0\Entities.dll
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\bin\Debug\net9.0\Entities.pdb
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.csproj.AssemblyReference.cache
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.AssemblyInfoInputs.cache
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.AssemblyInfo.cs
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.sourcelink.json
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.dll
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\refint\Entities.dll
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\Entities.pdb
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Entities\obj\Debug\net9.0\ref\Entities.dll

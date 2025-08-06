@@ -1,0 +1,6 @@
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Repository\obj\Debug\net9.0\Repository.csproj.AssemblyReference.cache
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Repository\obj\Debug\net9.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Repository\obj\Debug\net9.0\Repository.AssemblyInfoInputs.cache
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Repository\obj\Debug\net9.0\Repository.AssemblyInfo.cs
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Repository\obj\Debug\net9.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Ayhan\Desktop\erp_proje\Erp_sistemi1\backend\Repository\obj\Debug\net9.0\Repository.sourcelink.json

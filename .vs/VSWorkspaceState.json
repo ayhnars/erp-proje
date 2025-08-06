@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\Entities",
+    "\\backend\\Entities\\Models",
+    "\\backend\\erpapi",
+    "\\backend\\erpapi\\Controllers",
+    "\\backend\\Services",
+    "\\backend\\Services\\Contrats"
+  ],
+  "SelectedNode": "\\backend\\Entities",
+  "PreviewInSolutionExplorer": false
+}
