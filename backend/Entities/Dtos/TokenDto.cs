@@ -1,3 +1,5 @@
+using System.Security.Claims;
+
 namespace Entities.Dtos
 {
     public class TokenDto

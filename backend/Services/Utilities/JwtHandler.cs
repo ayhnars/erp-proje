@@ -68,7 +68,7 @@ namespace Services.Utilities
                 new Claim(ClaimTypes.Name, user.UserName ?? string.Empty),
                 new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
                 new Claim("userId", user.Id),
-                new Claim("userName", user.UserName ?? string.Empty),
+                new Claim("userName", user.Email ?? string.Empty),
                 new Claim("jti", Guid.NewGuid().ToString()), // Unique token ID
                 new Claim("iat", DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64)
             };
@@ -93,7 +93,6 @@ namespace Services.Utilities
                 claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(expiresInMinutes),
                 notBefore: DateTime.UtcNow,
-                issuedAt: DateTime.UtcNow,
                 signingCredentials: signingCredentials
             );
         }

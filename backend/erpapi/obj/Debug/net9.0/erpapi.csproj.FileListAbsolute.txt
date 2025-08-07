@@ -11,6 +11,7 @@ F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\AutoMapper.Extensi
 F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\Azure.Core.dll
 F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\Azure.Identity.dll
 F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\Humanizer.dll
+F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 F:\code\Erp-Project\erp-proje\backend\erpapi\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

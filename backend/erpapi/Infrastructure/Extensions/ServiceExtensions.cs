@@ -1,8 +1,11 @@
+using System.Text;
 using Entities;
+using Infrastructure.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Repository;
 using Services;
 using Services.Contrats;
@@ -51,5 +54,42 @@ namespace erpapi.Extensions
                 options.ExpirationScanFrequency = TimeSpan.FromMinutes(5);
             });
         }
+        public static void ConfigureAuth(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<JwtConfiguration>(configuration.GetSection("JwtSettings"));
+
+            var jwtSettings = configuration.GetSection("JwtSettings").Get<JwtConfiguration>();
+
+            if (string.IsNullOrEmpty(jwtSettings?.SecretKey) || jwtSettings.SecretKey.Length < 32)
+                throw new Exception("JWT securityKey boş veya çok kısa!");
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = "JwtBearer";
+                options.DefaultChallengeScheme = "JwtBearer";
+            })
+            .AddJwtBearer("JwtBearer", options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+
+                    ValidIssuer = jwtSettings.Issuer,
+                    ValidAudience = jwtSettings.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey)),
+
+                    ClockSkew = TimeSpan.Zero // Token süresi gecikmesiz biter
+                };
+            });
+
+            services.AddAuthorization(); // policy tanımlamak istersen buradan yaparsın
+        }
+
+
     }
 }
+
+

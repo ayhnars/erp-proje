@@ -1,5 +1,6 @@
 using Entities;
 using Entities.Dtos;
+using Entities.Dtos.UserDtos;
 using Microsoft.AspNetCore.Identity;
 
 namespace Services.Contrats
@@ -14,5 +15,8 @@ namespace Services.Contrats
         Task Update(ErpUserDtoForUpdate userDto);
         Task<IdentityResult> ResetPassword(ResetPasswordDto model);
         Task<IdentityResult> DeleteOneUser(string userName);
+
+        Task<TokenDto?> LoginAsync(ErpUserDtoForLogin loginDto);
+        Task<bool> LogoutAsync(string userId);
     }
 }

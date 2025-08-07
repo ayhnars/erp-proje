@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Services.Contrats;
 using AutoMapper;
+using Entities.Dtos.UserDtos;
 
 namespace Services
 {
@@ -13,14 +14,17 @@ namespace Services
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
 
+        private readonly IJwtHandler _jwtHandler;
+
         public AuthManager(UserManager<ErpUser> userManager,
                            RoleManager<IdentityRole> roleManager,
                            IMapper mapper,
-                           ILogger<AuthManager> logger)
+                           IJwtHandler jwtHandler)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _mapper = mapper;
+            _jwtHandler = jwtHandler;
         }
 
         public IEnumerable<IdentityRole> Roles => _roleManager.Roles;
@@ -70,7 +74,7 @@ namespace Services
                 return IdentityResult.Failed(new IdentityError { Description = "Kullanıcı bulunamadı." });
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            return await _userManager.ResetPasswordAsync(user, token, model.ConfirmPassword);
+            return await _userManager.ResetPasswordAsync(user, token, model.NewPassword);
         }
 
         public async Task<IdentityResult> DeleteOneUser(string userName)
@@ -81,5 +85,41 @@ namespace Services
 
             return await _userManager.DeleteAsync(user);
         }
+        public async Task<TokenDto?> LoginAsync(ErpUserDtoForLogin loginDto)
+        {
+            var user = await _userManager.FindByEmailAsync(loginDto.Email);
+            if (user == null)
+                return null;
+
+            var isPasswordValid = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+            if (!isPasswordValid)
+                return null;
+
+            // Kullanıcının rollerini çekiyoruz
+            var roles = await _userManager.GetRolesAsync(user);
+
+            // Token oluşturuluyor
+            var token = _jwtHandler.CreateToken(user, roles.ToList());
+
+            // Refresh token da üretiliyor
+            user.RefreshToken = token.RefreshToken;
+            user.RefreshTokenExpiryDate = token.RefreshTokenExpiration;
+            await _userManager.UpdateAsync(user);
+
+            return token;
+        }
+        public async Task<bool> LogoutAsync(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+                return false;
+
+            user.RefreshToken = null;
+            user.RefreshTokenExpiryDate = null;
+
+            var result = await _userManager.UpdateAsync(user);
+            return result.Succeeded;
+        }
+
     }
 }
