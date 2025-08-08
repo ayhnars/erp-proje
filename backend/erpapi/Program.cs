@@ -1,41 +1,26 @@
 using Entities;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using AutoMapper;
-using Repository;
-using Services;
-using Services.Contrats;
+using erpapi.Extensions;
+using Infrastructure.Configuration;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// DbContext konfigürasyonu (veritabanı sağlayıcısı ile)
-builder.Services.AddDbContext<RepositoryContext>(options =>
-    options.UseSqlServer(connectionString, sqlOptions =>
-        sqlOptions.MigrationsAssembly("erpapi")));
-
-builder.Services.AddIdentity<ErpUser, IdentityRole>()
-    .AddEntityFrameworkStores<RepositoryContext>()
-    .AddDefaultTokenProviders();
-
+//Program.cs Kodun okunabilirliği için Extensionlara aktarıldı. Ifrastructure.Extensions.ServiceExtesions.cs
+// Extension methodlar
+builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureCaching(); // Memory cache eklendi
+builder.Services.ConfigureScopedServices();
+builder.Services.ConfigureAuth(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program));
-
-builder.Services.AddScoped<ModuleRepository>();
-builder.Services.AddScoped<IModuleManager, ModuleManager>();
-builder.Services.AddScoped<IAuthManager, AuthManager>();
-
-// Add services to the container.
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
