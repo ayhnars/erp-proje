@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using erpapi.Services.Contracts;
-using erpapi.Models;
-using erpapi.Services;
+using Services.Contracts;
+using Entities.Models;
+using Services;
 
 namespace erpapi.Controllers
 {
@@ -22,7 +22,7 @@ namespace erpapi.Controllers
             var orders = _orderService.GetAllOrders();
             return Ok(orders);
         }
-
+        
         [HttpPost]
         public IActionResult Create(Order order)
         {

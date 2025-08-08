@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using erpapi.Models; // Order sınıfı buradaysa bu kesin olmalı
-using Repository; // RepositoryContext için
-// using erpapi.Repository; // BUNU KALDIR! Çünkü aynı isimde class olabilir
+using erpapi.Repository;
+using Repository;
 
-namespace erpapi.Repository
+namespace Repository
 {
     public class OrderRepository : IOrderRepository
     {
@@ -15,25 +14,15 @@ namespace erpapi.Repository
             _context = context;
         }
 
-        public IEnumerable<erpapi.Models.Order> GetAllOrders()
+        public IEnumerable<Order> GetAllOrders()
         {
             return _context.Orders.ToList();
         }
 
-        public void CreateOrder(erpapi.Models.Order order)
+        public void CreateOrder(Order order)
         {
             _context.Orders.Add(order);
             _context.SaveChanges();
-        }
-
-        public void CreateOrder(Order order)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerable<Order> IOrderRepository.GetAllOrders()
-        {
-            throw new NotImplementedException();
         }
     }
 }

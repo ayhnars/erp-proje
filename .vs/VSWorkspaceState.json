@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\Entities",
+    "\\backend\\Entities\\Models",
+    "\\backend\\erpapi",
+    "\\backend\\erpapi\\Controllers"
+  ],
+  "SelectedNode": "\\backend\\erpapi\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

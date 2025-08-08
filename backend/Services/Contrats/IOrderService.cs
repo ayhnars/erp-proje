@@ -1,10 +1,7 @@
 ﻿using System.Collections.Generic;
-using erpapi.Models;
-using erpapi.Services.Contracts;
+using Entities.Models;
 
-
-using Services.Contracts;
-
+namespace Services.Contracts
 {
     public interface IOrderService
     {

@@ -9,29 +9,40 @@ using Services.Contrats;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Veritabanı bağlantı cümlesi
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// DbContext konfigürasyonu (veritabanı sağlayıcısı ile)
 builder.Services.AddDbContext<RepositoryContext>(options =>
     options.UseSqlServer(connectionString, sqlOptions =>
         sqlOptions.MigrationsAssembly("erpapi")));
 
+// Identity konfigürasyonu
 builder.Services.AddIdentity<ErpUser, IdentityRole>()
     .AddEntityFrameworkStores<RepositoryContext>()
     .AddDefaultTokenProviders();
 
+// AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+// Custom servisler
 builder.Services.AddScoped<ModuleRepository>();
 builder.Services.AddScoped<IModuleManager, ModuleManager>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 
-// Add services to the container.
+// Controller desteği ve Swagger
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Geliştirme ortamı için Swagger UI gösterimi
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
