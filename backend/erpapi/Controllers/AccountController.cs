@@ -8,18 +8,20 @@ using Services.Contrats;
 
 [ApiController]
 [Route("api/[controller]")]
-public class AuthController : ControllerBase
+public class AccountController : ControllerBase
 {
     private readonly UserManager<ErpUser> _userManager;
     private readonly IJwtHandler _jwtHandler;
 
+    private readonly IAuthManager _authManager;
     private readonly IMapper _mapper;
 
-    public AuthController(UserManager<ErpUser> userManager, IJwtHandler jwtHandler, IMapper mapper)
+    public AccountController(UserManager<ErpUser> userManager, IJwtHandler jwtHandler, IMapper mapper, IAuthManager authManager)
     {
         _userManager = userManager;
         _jwtHandler = jwtHandler;
         _mapper = mapper;
+        _authManager = authManager;
     }
 
     [HttpPost("register")]
@@ -28,19 +30,24 @@ public class AuthController : ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        // AutoMapper ile userDto'yu direkt ErpUser'a çeviriyoruz
         var user = _mapper.Map<ErpUser>(userDto);
-
-        // Username'i de email olarak set et, bunu AutoMapper profiline ekleyebilirsin
         user.UserName = userDto.Email;
 
         var result = await _userManager.CreateAsync(user, userDto.Password);
+
         if (!result.Succeeded)
             return BadRequest(result.Errors);
 
+        // Rol atamadan önce rollerin varlığını kontrol et veya startup'ta seed et
+        string roleName = userDto.isBoss ? "Manager" : "Worker";
+
+
+        var addRoleResult = await _userManager.AddToRoleAsync(user, roleName);
+        if (!addRoleResult.Succeeded)
+            return BadRequest(addRoleResult.Errors);
+
         return Ok(new { message = "Kullanıcı başarıyla oluşturuldu." });
     }
-
 
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] ErpUserDtoForLogin loginDto)
@@ -83,4 +90,22 @@ public class AuthController : ControllerBase
 
         return Ok(new { message = "Başarıyla çıkış yapıldı." });
     }
+    [HttpGet("roles")]
+    public async Task<IActionResult> GetUserRoles()
+    {
+        var roles = _authManager.Roles;
+        if (roles == null || !roles.Any())
+            return NotFound(new { message = "Kullanıcı rolleri bulunamadı." });
+        return Ok(roles);
+    }
+    [HttpGet("users")]
+    public async Task<IActionResult> GetUsers()
+    {
+        var users = _authManager.GetAllUsers();
+        if (users == null || !users.Any())
+            return NotFound(new { message = "Kullanıcılar bulunamadı." });
+
+        return Ok(users);
+    }
+
 }

@@ -48,11 +48,7 @@ namespace erpapi.Extensions
 
         public static void ConfigureCaching(this IServiceCollection services)
         {
-            services.AddMemoryCache(options =>
-            {
-                options.SizeLimit = 1024; // MB cinsinden limit
-                options.ExpirationScanFrequency = TimeSpan.FromMinutes(5);
-            });
+            services.AddMemoryCache();
         }
         public static void ConfigureAuth(this IServiceCollection services, IConfiguration configuration)
         {

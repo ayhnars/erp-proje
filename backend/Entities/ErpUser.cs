@@ -28,8 +28,6 @@ namespace Entities
 
         public DateTime? LastActivityTime { get; set; }
 
-        public List<string> Roles { get; set; } = new List<string>();
-
         public List<string> Tags { get; set; } = new List<string>();
 
         public string? RefreshToken { get; set; }

@@ -32,7 +32,7 @@ namespace Services.Utilities
 
         private SigningCredentials GetSigningCredentials()
         {
-            var key = _jwtSettings["securityKey"];
+            var key = _jwtSettings["secretKey"];
             if (string.IsNullOrEmpty(key))
                 throw new Exception("JWT securityKey değeri bulunamadı");
 
@@ -85,7 +85,7 @@ namespace Services.Utilities
         private JwtSecurityToken GenerateAccessToken(SigningCredentials signingCredentials, List<Claim> claims)
         {
             var expiresInMinutes = Convert.ToDouble(_jwtSettings["accessTokenExpiresInMinutes"] ?? "15");
-            
+
             return new JwtSecurityToken
             (
                 issuer: _jwtSettings["validIssuer"],
@@ -110,7 +110,7 @@ namespace Services.Utilities
             var claims = GetClaims(user, roles);
             var accessToken = GenerateAccessToken(_signingCredentials, claims);
             var refreshToken = GenerateRefreshToken();
-            
+
             var accessTokenString = _tokenHandler.WriteToken(accessToken);
             var refreshTokenExpiresInDays = Convert.ToInt32(_jwtSettings["refreshTokenExpiresInDays"] ?? "7");
 
