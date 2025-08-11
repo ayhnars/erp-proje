@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Entities.Models;
+using OrderEntity = Entities.Models.Order;
 
-namespace Services.Contracts
+namespace Services.Contrats
 {
     public interface IOrderService
     {
-        IEnumerable<Order> GetAllOrders();
-        void CreateOrder(Order order);
+        IEnumerable<OrderEntity> GetAllOrders();
+        void CreateOrder(OrderEntity order);
     }
 }

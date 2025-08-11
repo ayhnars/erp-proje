@@ -4,6 +4,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Entities.Models;
+using Repository.Contrats;
 
 namespace Repository
 {

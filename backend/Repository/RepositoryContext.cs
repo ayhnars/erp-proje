@@ -1,8 +1,9 @@
 ﻿using Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Repository;
 using System.Reflection;
+using Entities.Models; // Burada kalsın
+using OrderEntity = Entities.Models.Order; // ÇAKIŞMAYI ENGELLER
 
 public class RepositoryContext : IdentityDbContext<ErpUser>
 {
@@ -11,8 +12,11 @@ public class RepositoryContext : IdentityDbContext<ErpUser>
     {
     }
 
+    public DbSet<OrderItem> OrderItems { get; set; }
     public DbSet<Modules> Modules { get; set; }
-    public DbSet<Order> Orders { get; set; }
+
+    // BURADA Entities.Models.Order'ı açıkça belirtiyoruz
+    public DbSet<OrderEntity> Orders { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
