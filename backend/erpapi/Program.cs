@@ -1,19 +1,26 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Entities;
+using erpapi.Extensions;
+using Infrastructure.Configuration;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+//Program.cs Kodun okunabilirliği için Extensionlara aktarıldı. Ifrastructure.Extensions.ServiceExtesions.cs
+// Extension methodlar
+builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureCaching(); // Memory cache eklendi
+builder.Services.ConfigureScopedServices();
+builder.Services.ConfigureAuth(builder.Configuration);
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
