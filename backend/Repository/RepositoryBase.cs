@@ -4,53 +4,41 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using Entities.Models;
-using Repository.Contrats;
 
 namespace Repository
 {
-    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    // Tüm repo'larýnýz RepositoryContext kullanýyorsa tip güvenliði için DbContext yerine bunu kullanmak daha iyi.
+    public abstract class RepositoryBase<T> where T : class
     {
-        protected DbContext RepositoryContext { get; set; }
+        protected readonly RepositoryContext _context;
 
-        public RepositoryBase(DbContext repositoryContext)
+        protected RepositoryBase(RepositoryContext context)
         {
-            RepositoryContext = repositoryContext;
+            _context = context;
         }
 
+        // Sorgu metodlarý (NoTracking)
         public IQueryable<T> FindAll()
-        {
-            return RepositoryContext.Set<T>().AsNoTracking();
-        }
+            => _context.Set<T>().AsNoTracking();
 
-        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression)
-        {
-            return RepositoryContext.Set<T>().Where(expression).AsNoTracking();
-        }
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> predicate)
+            => _context.Set<T>().Where(predicate).AsNoTracking();
 
-        public void Create(T entity)
-        {
-            RepositoryContext.Set<T>().Add(entity);
-        }
+        // Deðiþiklik metodlarý (Save'i bilerek burada yapmýyoruz; UnitOfWork/Service tarafýnda çaðrýlýr)
+        public void Create(T entity) => _context.Set<T>().Add(entity);
+        public void Update(T entity) => _context.Set<T>().Update(entity);
+        public void Delete(T entity) => _context.Set<T>().Remove(entity);
 
-        public void Update(T entity)
-        {
-            RepositoryContext.Set<T>().Update(entity);
-        }
-
-        public void Delete(T entity)
-        {
-            RepositoryContext.Set<T>().Remove(entity);
-        }
-
+        // Async yardýmcýlar
         public async Task<List<T>> GetAllAsync()
-        {
-            return await RepositoryContext.Set<T>().ToListAsync();
-        }
+            => await _context.Set<T>().AsNoTracking().ToListAsync();
 
-        public async Task<T> GetByIdAsync(object id)
-        {
-            return await RepositoryContext.Set<T>().FindAsync(id);
-        }
+        // Bulamazsa null dönebilir -> T? kullan
+        public async Task<T?> GetByIdAsync(object id)
+            => await _context.Set<T>().FindAsync(id);
+
+        // Ýstersen ortak Save
+        public Task<int> SaveChangesAsync()
+            => _context.SaveChangesAsync();
     }
 }

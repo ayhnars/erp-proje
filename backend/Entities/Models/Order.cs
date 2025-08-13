@@ -19,6 +19,7 @@ namespace Entities.Models
         Cancelled
     }
 
+    [Table("Orders")]
     public class Order
     {
         [Key]
@@ -30,16 +31,19 @@ namespace Entities.Models
         [ForeignKey("Customer")]
         public int CustomerID { get; set; }
 
+        // Sipariş oluşturulduğunda otomatik dolsun
         public DateTime OrderDate { get; set; } = DateTime.Now;
 
-        public DateTime DeliveryDate { get; set; }
+        // Teslim tarihi daha sonra belli olabilir -> nullable yap
+        public DateTime? DeliveryDate { get; set; }
 
-        public PaymentMethod PaymentMethod { get; set; }
+        public PaymentMethod PaymentMethod { get; set; } = PaymentMethod.Cash;
 
-        public OrderStatus Status { get; set; }
+        public OrderStatus Status { get; set; } = OrderStatus.Pending;
 
-        // Navigation Properties (isteğe bağlı)
-        // public Company Company { get; set; }
-        // public Customer Customer { get; set; }
+        // Navigation (istersen açarsın)
+        // public Company? Company { get; set; }
+        // public Customer? Customer { get; set; }
+        // public ICollection<OrderItem>? Items { get; set; }
     }
 }

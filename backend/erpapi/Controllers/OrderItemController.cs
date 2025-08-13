@@ -1,6 +1,7 @@
 ﻿using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contrats;
+using System.Threading.Tasks;
 
 namespace erpapi.Controllers
 {
@@ -22,14 +23,14 @@ namespace erpapi.Controllers
         public async Task<IActionResult> Get(int id) => Ok(await _manager.GetByIdAsync(id));
 
         [HttpPost]
-        public async Task<IActionResult> Create(OrderItem item)
+        public async Task<IActionResult> Create([FromBody] OrderItem item)
         {
             await _manager.CreateAsync(item);
             return Ok();
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(OrderItem item)
+        public async Task<IActionResult> Update([FromBody] OrderItem item)
         {
             await _manager.UpdateAsync(item);
             return Ok();
