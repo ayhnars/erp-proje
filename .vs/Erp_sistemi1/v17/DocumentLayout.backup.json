@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\migrations\\202508140746519_addproductstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:migrations\\202508140746519_addproductstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,32 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "202508140746519_AddProductsTable.cs",
-              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Migrations\\202508140746519_AddProductsTable.cs",
-              "RelativeDocumentMoniker": "Migrations\\202508140746519_AddProductsTable.cs",
-              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Migrations\\202508140746519_AddProductsTable.cs",
-              "RelativeToolTip": "Migrations\\202508140746519_AddProductsTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T07:46:57.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAiwGMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T07:44:21.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UygulamaDbContext.cs",
               "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Data\\UygulamaDbContext.cs",
               "RelativeDocumentMoniker": "Data\\UygulamaDbContext.cs",
@@ -69,19 +48,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T07:41:15.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T07:40:26.046Z",
               "EditorCaption": ""
             }
           ]
