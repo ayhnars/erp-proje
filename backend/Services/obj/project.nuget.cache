@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Nkk3z6kQKWA=",
+  "dgSpecHash": "wmnLK8NzjNU=",
   "success": true,
   "projectFilePath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ayhan\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ayhan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Ayhan\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Ayhan\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\Ayhan\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",

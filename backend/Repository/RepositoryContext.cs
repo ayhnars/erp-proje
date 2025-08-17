@@ -1,26 +1,37 @@
-﻿using Entities;
+﻿// Repository/RepositoryContext.cs
+using System.Reflection;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
-using Entities.Models; // Burada kalsın
-using OrderEntity = Entities.Models.Order; // ÇAKIŞMAYI ENGELLER
+using Entities;                 // ErpUser burada
+using Entities.Models;          // OrderItem, Modules, Order (vb.)
 
-public class RepositoryContext : IdentityDbContext<ErpUser>
+// Alias: Order ismini netleştir
+using OrderEntity = Entities.Models.Order;
+
+namespace Repository
 {
-    public RepositoryContext(DbContextOptions<RepositoryContext> options)
-        : base(options)
+    public class RepositoryContext
+        : IdentityDbContext<ErpUser, IdentityRole, string>
     {
-    }
+        public RepositoryContext(DbContextOptions<RepositoryContext> options)
+            : base(options) { }
 
-    public DbSet<OrderItem> OrderItems { get; set; }
-    public DbSet<Modules> Modules { get; set; }
+        // DbSet'ler
+        public DbSet<OrderItem> OrderItems { get; set; } = default!;
+        public DbSet<Modules> Modules { get; set; } = default!;
+        public DbSet<OrderEntity> Orders { get; set; } = default!;
 
-    // BURADA Entities.Models.Order'ı açıkça belirtiyoruz
-    public DbSet<OrderEntity> Orders { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Identity tabloları + kendi modellerin
+            base.OnModelCreating(modelBuilder);
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            // (Opsiyonel) Varsayılan şema
+            // modelBuilder.HasDefaultSchema("dbo");
+
+            // Bu assembly içindeki tüm IEntityTypeConfiguration<> sınıflarını uygula
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
 }
