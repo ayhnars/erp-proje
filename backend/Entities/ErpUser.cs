@@ -20,7 +20,7 @@ namespace Entities
 
         public string LastName { get; set; } = string.Empty;
 
-        public string? CompanyName { get; set; } = string.Empty;
+        public int? CompanyId { get; set; }
 
         public string? RegistrationKey { get; set; }
 

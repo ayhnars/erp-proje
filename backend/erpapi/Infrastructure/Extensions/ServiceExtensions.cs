@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Repository;
+using Repository.Contrats;
 using Services;
 using Services.Contrats;
 using Services.Utilities;
@@ -20,8 +21,7 @@ namespace erpapi.Extensions
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             services.AddDbContext<RepositoryContext>(options =>
-                options.UseSqlServer(connectionString, sqlOptions =>
-                    sqlOptions.MigrationsAssembly("erpapi")));
+                options.UseSqlServer(connectionString, b => b.MigrationsAssembly("erpapi")));
         }
 
         public static void ConfigureIdentity(this IServiceCollection services)
@@ -44,6 +44,8 @@ namespace erpapi.Extensions
             services.AddScoped<IModuleManager, ModuleManager>();
             services.AddScoped<IAuthManager, AuthManager>();
             services.AddScoped<IJwtHandler, JwtHandler>();
+            services.AddScoped<ICompanyManager, CompanyManager>();
+            services.AddScoped<ICompanyRepository, CompanyRepository>();
         }
 
         public static void ConfigureCaching(this IServiceCollection services)

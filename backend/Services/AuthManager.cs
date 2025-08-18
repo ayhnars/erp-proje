@@ -42,6 +42,8 @@ namespace Services
         public async Task<ErpUserDtoForUpdate> GetOneUserForUpdate(string userName)
         {
             var user = await _userManager.FindByNameAsync(userName);
+            if (user == null)
+                throw new Exception("Güncellenmek istenen kullanıcı bulunamadı.");
             return _mapper.Map<ErpUserDtoForUpdate>(user);
         }
 
@@ -52,7 +54,7 @@ namespace Services
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, "Employee"); // varsayılan rol
+                await _userManager.AddToRoleAsync(user,userDto.isBoss ?  "Manager" : "Employee"); // varsayılan rol
             }
 
             return result;
@@ -60,7 +62,7 @@ namespace Services
 
         public async Task Update(ErpUserDtoForUpdate userDto)
         {
-            var user = await _userManager.FindByNameAsync(userDto.Name);
+            var user = await _userManager.FindByNameAsync(userDto.Email);
             if (user == null) return;
 
             _mapper.Map(userDto, user);

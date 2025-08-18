@@ -1,7 +1,9 @@
 using AutoMapper;
 using Entities;
 using Entities.Dtos;
+using Entities.Dtos.CompanyDtos;
 using Entities.Dtos.UserDtos;
+using Entities.Models;
 
 namespace erpapi.Infrastructure.Mapper
 {
@@ -13,6 +15,10 @@ namespace erpapi.Infrastructure.Mapper
             CreateMap<ErpUser, ErpUserDtoForUpdate>();
             CreateMap<ErpUser, ErpUserDtoForUpdate>().ReverseMap();
             CreateMap<ErpUserDtoforRegister, ErpUser>().ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email));
+            CreateMap<CompanyDtoForCreate, Company>();
+            CreateMap<CompanyDtoForUpdate, Company>().ReverseMap();
+            CreateMap<CompanyDtoForUpdate, Company>();
+
         }
     }
 }
