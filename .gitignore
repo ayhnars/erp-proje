@@ -1,10 +1,9 @@
-﻿################################################################################
-# Bu .gitignore dosyası Microsoft(R) Visual Studio tarafından otomatik olarak oluşturulmuştur.
-################################################################################
-
-/.vs/erp-proje/FileContentIndex
-/.vs/Erp_sistemi1/FileContentIndex
-/.vs
-/backend
-/bin
-/obj
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.dll
+*.pdb
