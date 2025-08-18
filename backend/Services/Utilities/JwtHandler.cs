@@ -52,8 +52,8 @@ namespace Services.Utilities
                 ValidateAudience = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
-                ValidIssuer = _jwtSettings["validIssuer"],
-                ValidAudience = _jwtSettings["validAudience"],
+                ValidIssuer = _jwtSettings["Issuer"],
+                ValidAudience = _jwtSettings["Audience"],
                 IssuerSigningKey = _signingCredentials.Key,
                 ClockSkew = TimeSpan.Zero, // Tam zaman kontrolü
                 RequireExpirationTime = true
@@ -88,8 +88,8 @@ namespace Services.Utilities
 
             return new JwtSecurityToken
             (
-                issuer: _jwtSettings["validIssuer"],
-                audience: _jwtSettings["validAudience"],
+                issuer: _jwtSettings["Issuer"],
+                audience: _jwtSettings["Audience"],
                 claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(expiresInMinutes),
                 notBefore: DateTime.UtcNow,

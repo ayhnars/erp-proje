@@ -1,9 +1,14 @@
 using System.Security.Claims;
 using AutoMapper;
 using Entities;
+using Entities.Dtos;
+using Entities.Dtos.CompanyDtos;
 using Entities.Dtos.UserDtos;
+using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 using Services.Contrats;
 
 [ApiController]
@@ -16,12 +21,15 @@ public class AccountController : ControllerBase
     private readonly IAuthManager _authManager;
     private readonly IMapper _mapper;
 
-    public AccountController(UserManager<ErpUser> userManager, IJwtHandler jwtHandler, IMapper mapper, IAuthManager authManager)
+    private readonly ICompanyManager _companyManager;
+
+    public AccountController(UserManager<ErpUser> userManager, IJwtHandler jwtHandler, IMapper mapper, IAuthManager authManager, ICompanyManager companyManager)
     {
         _userManager = userManager;
         _jwtHandler = jwtHandler;
         _mapper = mapper;
         _authManager = authManager;
+        _companyManager = companyManager;
     }
 
     [HttpPost("register")]
@@ -106,6 +114,40 @@ public class AccountController : ControllerBase
             return NotFound(new { message = "Kullanıcılar bulunamadı." });
 
         return Ok(users);
+    }
+
+    [HttpPost("createcompany")]
+    [Authorize(Roles = "Manager")]
+    public async Task<IActionResult> CreateCompany([FromBody] CompanyDtoForCreate companyDto)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        var userName = User.Identity?.Name;
+        if (string.IsNullOrEmpty(userName))
+            return Unauthorized();
+
+        var user = await _userManager.FindByNameAsync(userName);
+        if (user == null)
+            return NotFound();
+
+        Company company = _mapper.Map<Company>(companyDto);
+        company.RegistrationDate = DateTime.UtcNow; // Şirket kayıt tarihi
+
+        await _companyManager.CreateCompanyAsync(company);
+        user.CompanyId = company.CompanyId; // Şirket ID'sini kullanıcıya atıyoruz
+        await _userManager.UpdateAsync(user);
+        return Ok(new { message = "Şirket başarıyla oluşturuldu." });
+    }
+
+    [HttpGet("companies")]
+    public async Task<IActionResult> GetAllCompanies()
+    {
+        var companies = await _companyManager.GetAllCompaniesAsync();
+        if (companies == null || !companies.Any())
+            return NotFound(new { message = "Şirketler bulunamadı." });
+
+        return Ok(companies);
     }
 
 }

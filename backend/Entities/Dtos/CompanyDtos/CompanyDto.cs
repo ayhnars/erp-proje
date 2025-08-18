@@ -3,7 +3,7 @@ namespace Entities.Dtos.CompanyDtos
     // DTO sınıfı
     public class CompanyDto
     {
-        public int CompanyID { get; set; }
+        public int CompanyId { get; set; }
         public string CompanyName { get; set; } = null!;
         public string? TaxNumber { get; set; }
         public string? Address { get; set; }

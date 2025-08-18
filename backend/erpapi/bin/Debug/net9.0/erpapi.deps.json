@@ -17,6 +17,7 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
           "Microsoft.IdentityModel.Tokens": "8.13.0",
+          "Repository": "1.0.0",
           "Services": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "8.13.0"
         },

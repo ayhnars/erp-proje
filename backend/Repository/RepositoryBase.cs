@@ -4,14 +4,16 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Entities;
 
 namespace Repository
 {
     public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        protected DbContext RepositoryContext { get; set; }
+        protected RepositoryContext RepositoryContext { get; set; }
 
-        public RepositoryBase(DbContext repositoryContext)
+        public RepositoryBase(RepositoryContext repositoryContext)
         {
             RepositoryContext = repositoryContext;
         }
@@ -29,16 +31,22 @@ namespace Repository
         public void Create(T entity)
         {
             RepositoryContext.Set<T>().Add(entity);
+            // Eğer DbContext'in değişikliklerini hemen kaydetmek istiyorsan
+            RepositoryContext.SaveChanges();
         }
 
         public void Update(T entity)
         {
             RepositoryContext.Set<T>().Update(entity);
+            RepositoryContext.SaveChanges();
+
         }
 
         public void Delete(T entity)
         {
             RepositoryContext.Set<T>().Remove(entity);
+            RepositoryContext.SaveChanges();
+
         }
 
         public async Task<List<T>> GetAllAsync()

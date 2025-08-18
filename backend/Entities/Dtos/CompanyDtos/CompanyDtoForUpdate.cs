@@ -1,18 +1,29 @@
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
+
 namespace Entities.Dtos.CompanyDtos
 {
-    public class CompanyUpdateDto : CompanyDto
+    public class CompanyDtoForUpdate
     {
         // Buraya eğer güncellenmesini istemediğin alanlar varsa override edebilirsin
         // Mesela RegistrationDate'nin güncellenmesini istemiyorsan:
 
-        public new DateTime RegistrationDate { get; }  // set yok, sadece get var
+        public DateTime RegistrationDate { get; }  // set yok, sadece get var
 
-        public new int CompanyID { get; init; }  // id zorunlu
+        public int CompanyId { get; init; }  // id zorunlu
 
-        public new string CompanyName { get; init; } = null!;
-        public new string? TaxNumber { get; init; }
-        public new string? Address { get; init; }
-        public new string? Phone { get; init; }
+        [Required(ErrorMessage = "Şirket adı Boş kalamaz.")]
+        public string CompanyName { get; init; } = null!;
+
+        [Required(ErrorMessage = "Vergi numarası Boş kalamaz.")]
+        public string? TaxNumber { get; init; }
+
+        [Required(ErrorMessage = "Adres Boş kalamaz.")]
+        public string? Address { get; init; }
+
+        [Required(ErrorMessage = "Telefon numarası Boş kalamaz.")]
+        [DataType(DataType.PhoneNumber)]
+        public string? Phone { get; init; }
 
         // RegistrationDate kaldırdım ki değiştirilmesin
     }

@@ -36,6 +36,7 @@ namespace Services
         public async Task CreateCompanyAsync(Company company)
         {
             _companyRepository.Create(company);
+            
         }
 
         public async Task UpdateCompanyAsync(Company company)
