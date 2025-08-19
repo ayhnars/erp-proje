@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("erpapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c5128abda8c9164d72f5d275cf434ecc0319257")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f94dbed73371f5459d1b29607c8587f38509439")]
 [assembly: System.Reflection.AssemblyProductAttribute("erpapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("erpapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
