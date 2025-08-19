@@ -1,5 +1,5 @@
-﻿using System.Data.Entity;
-using Erp_sistemi1.Models;
+﻿using Erp_sistemi1.Models;
+using System.Data.Entity;
 
 namespace Erp_sistemi1.Data
 {
@@ -11,5 +11,6 @@ namespace Erp_sistemi1.Data
         public DbSet<Product> Products { get; set; }
 
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }

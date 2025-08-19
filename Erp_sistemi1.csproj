@@ -145,6 +145,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CategoriesApiController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Data\UygulamaDbContext.cs" />
@@ -163,8 +164,13 @@
     <Compile Include="Migrations\202508140746519_AddProductsTable.Designer.cs">
       <DependentUpon>202508140746519_AddProductsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202508181612324_AddCustomerTable.cs" />
+    <Compile Include="Migrations\202508181612324_AddCustomerTable.Designer.cs">
+      <DependentUpon>202508181612324_AddCustomerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -219,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Customers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202508061952282_InitialCreate.resx">
@@ -229,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202508140746519_AddProductsTable.resx">
       <DependentUpon>202508140746519_AddProductsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202508181612324_AddCustomerTable.resx">
+      <DependentUpon>202508181612324_AddCustomerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
