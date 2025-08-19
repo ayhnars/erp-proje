@@ -2,8 +2,13 @@
   "version": "0.2.1",
   "tasks": [
     {
+<<<<<<< HEAD
       "taskLabel": "görev-erpapi",
       "appliesTo": "backend/erpapi/",
+=======
+      "taskLabel": "görev-moduls",
+      "appliesTo": "/",
+>>>>>>> order
       "type": "launch"
     }
   ]

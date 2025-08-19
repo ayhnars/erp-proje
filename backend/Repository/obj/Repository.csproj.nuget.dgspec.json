@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Repository.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\obj\\",
+=======
+    "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\obj\\",
+>>>>>>> order
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -80,6 +94,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -88,6 +103,16 @@
         "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\obj\\",
+=======
+    "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\obj\\",
+>>>>>>> order
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,8 +134,13 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Entities.csproj"
+=======
+              "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj"
+>>>>>>> order
               }
             }
           }
@@ -131,10 +161,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Identity": {
-              "target": "Package",
-              "version": "[2.3.1, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.7, )"
@@ -143,11 +169,23 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.7, )"
             }

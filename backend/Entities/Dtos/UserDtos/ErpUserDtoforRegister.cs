@@ -1,18 +1,21 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Entities.Dtos
 {
-
-    public class ErpUserDtoforRegister
+    // Sýnýf adýný .NET kuralýna göre düzelttim: ErpUserDtoForRegister
+    public class ErpUserDtoForRegister : ErpUserDto
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string ConfirmPassword { get; set; }
-        public string PhoneNumber { get; set; }
-        public string CompanyName { get; set; }
-        public bool isBoss { get; set; }
-        public string SignCode { get; set; }
+        // Zorunlu alanlar için required kullan
+        [Required]
+        public string ConfirmPassword { get; init; } = string.Empty;
+
+        // Þirket adý ve imza kodu opsiyonelse nullable yap;
+        // opsiyonel deðillerse '?' kaldýrýp string.Empty baþlat.
+        public string? CompanyName { get; init; }
+
+        // PascalCase: IsBoss
+        public bool IsBoss { get; init; } = false;
+
+        public string? SignCode { get; init; }
     }
-
-
 }

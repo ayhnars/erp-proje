@@ -9,10 +9,10 @@ namespace Repositories.Config
         public void Configure(EntityTypeBuilder<IdentityRole> builder)
         {
             builder.HasData(
-                new IdentityRole(){ Name="Manager", NormalizedName="MANAGER"},
-                new IdentityRole(){ Name="Moderator", NormalizedName="MODERATOR"},
-                new IdentityRole(){ Name="Admin", NormalizedName="ADMIN"},
-                new IdentityRole(){ Name="Worker", NormalizedName="WORKER"}
+                new IdentityRole() { Id = "1", Name = "Manager", NormalizedName = "MANAGER" },
+                new IdentityRole() { Id = "2", Name = "Moderator", NormalizedName = "MODERATOR" },
+                new IdentityRole() { Id = "3", Name = "Admin", NormalizedName = "ADMIN" },
+                new IdentityRole() { Id = "4", Name = "Worker", NormalizedName = "WORKER" }
             );
         }
     }

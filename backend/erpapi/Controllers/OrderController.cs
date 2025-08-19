@@ -1,7 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
 using erpapi.Services.Contracts;
 using erpapi.Models;
 using erpapi.Services;
+=======
+using Services.Contrats;
+using Entities.Models;
+using Entities.Dtos;
+using System.Threading.Tasks;
+>>>>>>> order
 
 namespace erpapi.Controllers
 {
@@ -16,6 +23,10 @@ namespace erpapi.Controllers
             _orderService = orderService;
         }
 
+<<<<<<< HEAD
+=======
+        // Var olan uçlar (liste + create)
+>>>>>>> order
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -24,10 +35,36 @@ namespace erpapi.Controllers
         }
 
         [HttpPost]
+<<<<<<< HEAD
         public IActionResult Create(Order order)
+=======
+        public IActionResult Create([FromBody] Order order)
+>>>>>>> order
         {
             _orderService.CreateOrder(order);
             return Ok(order);
         }
+<<<<<<< HEAD
+=======
+
+        // --- Yeni uçlar: Detay + Güncelle ---
+        // /api/order/{id}/details
+        [HttpGet("{id}/details")]
+        public async Task<ActionResult<OrderDetailsDto>> GetDetails(int id)
+        {
+            var dto = await _orderService.GetOrderDetailsAsync(id);
+            if (dto == null) return NotFound();
+            return Ok(dto);
+        }
+
+        // /api/order/{id}
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] OrderDetailsDto dto)
+        {
+            if (id != dto.OrderID) return BadRequest("Mismatched id");
+            await _orderService.UpdateOrderAsync(dto);
+            return NoContent();
+        }
+>>>>>>> order
     }
 }

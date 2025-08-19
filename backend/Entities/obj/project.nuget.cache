@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "flClwM0ya5g=",
   "success": true,
   "projectFilePath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Entities.csproj",
+=======
+  "dgSpecHash": "iKgKxlAPf9U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj",
+>>>>>>> order
   "expectedPackageFiles": [
     "C:\\Users\\Ayhan\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.3.0\\microsoft.aspnetcore.authentication.2.3.0.nupkg.sha512",
     "C:\\Users\\Ayhan\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
