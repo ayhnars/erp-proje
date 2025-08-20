@@ -1,4 +1,6 @@
 using Entities;
+using erpapi.Extensions;
+using Infrastructure.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -12,38 +14,28 @@ using Microsoft.OpenApi.Models; // Swagger için gerekli
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Connection string
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// DbContext -> Migration'lar Repository projesinde
-builder.Services.AddDbContext<RepositoryContext>(options =>
-    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("Repository"))
-#if DEBUG
-           .EnableDetailedErrors()
-           .EnableSensitiveDataLogging()
-#endif
-);
+var builder = WebApplication.CreateBuilder(args);
 
-// Identity
 builder.Services.AddIdentity<ErpUser, IdentityRole>()
     .AddEntityFrameworkStores<RepositoryContext>()
     .AddDefaultTokenProviders();
 
-// AutoMapper
-builder.Services.AddAutoMapper(typeof(Program), typeof(Services.MappingProfile));
+//Program.cs Kodun okunabilirliği için Extensionlara aktarıldı. Ifrastructure.Extensions.ServiceExtesions.cs
+// Extension methodlar
+builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureCaching(); // Memory cache eklendi
+builder.Services.ConfigureScopedServices();
+builder.Services.ConfigureAuth(builder.Configuration);
+builder.Services.AddAutoMapper(typeof(Program));
 
-// DI kayıtları
 builder.Services.AddScoped<ModuleRepository>();
 builder.Services.AddScoped<IModuleManager, ModuleManager>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 
-builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
-builder.Services.AddScoped<IOrderItemManager, OrderItemManager>();
-
-builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-builder.Services.AddScoped<IOrderService, OrderService>();
-
-// Controllers
+// Add services to the container.
 builder.Services.AddControllers();
 
 // Swagger
@@ -80,7 +72,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();

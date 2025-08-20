@@ -1,6 +1,7 @@
 {
   "Version": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\",
   "Documents": [
     {
@@ -43,6 +44,8 @@
       "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\repositorycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\repositorycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 =======
+=======
+>>>>>>> order
   "WorkspaceRootPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\",
   "Documents": [
     {
@@ -55,6 +58,10 @@
 >>>>>>> order
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\",
+  "Documents": [],
+>>>>>>> origin/dev
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -62,6 +69,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
 <<<<<<< HEAD
           "SelectedChildIndex": 6,
           "Children": [
@@ -120,6 +128,8 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T11:01:47.633Z",
 =======
+=======
+>>>>>>> order
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -233,11 +243,27 @@
         },
         {
           "DockedWidth": 200,
+=======
+>>>>>>> origin/dev
           "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+<<<<<<< HEAD
+>>>>>>> order
+=======
+<<<<<<< HEAD
+=======
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+>>>>>>> origin/dev
 >>>>>>> order
             }
           ]

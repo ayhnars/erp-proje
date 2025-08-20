@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\",
   "Documents": [
     {
@@ -19,10 +20,15 @@
       "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\",
+  "Documents": [],
+>>>>>>> order
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< HEAD
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -87,6 +93,9 @@
           ]
         }
       ]
+=======
+      "DocumentGroups": []
+>>>>>>> order
     }
   ]
 }

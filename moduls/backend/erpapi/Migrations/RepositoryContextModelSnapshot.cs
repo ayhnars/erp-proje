@@ -30,8 +30,8 @@ namespace erpapi.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<string>("CompanyName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("CompanyId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -81,13 +81,20 @@ namespace erpapi.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RefreshTokenExpiryDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("RegistrationKey")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("RememberMe")
-                        .HasColumnType("bit");
-
                     b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.PrimitiveCollection<string>("Tags")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -108,6 +115,35 @@ namespace erpapi.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Entities.Models.Company", b =>
+                {
+                    b.Property<int>("CompanyId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompanyId"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TaxNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CompanyId");
+
+                    b.ToTable("Companies");
                 });
 
             modelBuilder.Entity("Entities.Modules", b =>

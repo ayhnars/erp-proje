@@ -1,10 +1,26 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\backend\\erpapi",
     "\\backend\\erpapi\\Controllers",
     "\\moduls"
   ],
   "SelectedNode": "\\moduls\\backend",
+=======
+    "\\backend",
+    "\\backend\\Entities",
+    "\\backend\\Entities\\Dtos",
+    "\\backend\\Entities\\Dtos\\UserDtos",
+    "\\moduls",
+    "\\moduls\\backend",
+    "\\moduls\\backend\\Entities",
+    "\\moduls\\backend\\Entities\\Dtos",
+    "\\moduls\\backend\\Entities\\Dtos\\UserDtos",
+    "\\moduls\\backend\\erpapi",
+    "\\moduls\\backend\\erpapi\\Migrations"
+  ],
+  "SelectedNode": "\\moduls\\backend\\Entities\\Dtos\\UserDtos\\ErpUserDtoforRegister.cs",
+>>>>>>> order
   "PreviewInSolutionExplorer": false
 }

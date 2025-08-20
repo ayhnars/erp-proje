@@ -2,6 +2,7 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Entities.csproj": {}
   },
   "projects": {
@@ -14,6 +15,8 @@
         "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\obj\\",
 =======
+=======
+>>>>>>> order
     "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj": {}
   },
   "projects": {
@@ -25,13 +28,33 @@
         "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\obj\\",
+<<<<<<< HEAD
+>>>>>>> order
+=======
+=======
+    "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\emree\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\obj\\",
+>>>>>>> origin/dev
 >>>>>>> order
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Ayhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\emree\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/dev
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,7 +82,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
+<<<<<<< HEAD
         "SdkAnalysisLevel": "9.0.200"
+=======
+        "SdkAnalysisLevel": "9.0.300"
+>>>>>>> origin/dev
       },
       "frameworks": {
         "net9.0": {
@@ -90,7 +117,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+>>>>>>> origin/dev
         }
       }
     }
