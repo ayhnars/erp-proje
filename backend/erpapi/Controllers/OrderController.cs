@@ -23,10 +23,6 @@ namespace erpapi.Controllers
             _orderService = orderService;
         }
 
-<<<<<<< HEAD
-=======
-        // Var olan uçlar (liste + create)
->>>>>>> order
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -35,17 +31,11 @@ namespace erpapi.Controllers
         }
 
         [HttpPost]
-<<<<<<< HEAD
-        public IActionResult Create(Order order)
-=======
         public IActionResult Create([FromBody] Order order)
->>>>>>> order
         {
             _orderService.CreateOrder(order);
             return Ok(order);
         }
-<<<<<<< HEAD
-=======
 
         // --- Yeni uçlar: Detay + Güncelle ---
         // /api/order/{id}/details
@@ -65,6 +55,5 @@ namespace erpapi.Controllers
             await _orderService.UpdateOrderAsync(dto);
             return NoContent();
         }
->>>>>>> order
     }
 }
