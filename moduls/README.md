@@ -1,4 +1,0 @@
-# erp-proje
-
-başlangıç
-deneme

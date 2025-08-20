@@ -11,6 +11,8 @@ namespace erpapi.Infrastructure.Mapper
     {
         public Mapping()
         {
+            // ErpUser mapping'leri
+            CreateMap<ErpUser, ErpUserDtoForUpdate>();
             CreateMap<ErpUser, ErpUserDtoForUpdate>().ReverseMap();
             CreateMap<ErpUserDtoforRegister, ErpUser>().ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email));
             CreateMap<CompanyDtoForCreate, Company>();
