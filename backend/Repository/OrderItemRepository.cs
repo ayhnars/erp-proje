@@ -11,7 +11,8 @@ namespace Repository
     {
         private readonly RepositoryContext _context;
 
-        public OrderItemRepository(RepositoryContext context) : base(context)
+        public OrderItemRepository(RepositoryContext context)
+            : base(context)
         {
             _context = context;
         }

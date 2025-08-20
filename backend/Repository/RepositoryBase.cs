@@ -14,10 +14,10 @@ namespace Repository
     {
         protected readonly RepositoryContext _context;
 
-        protected RepositoryBase(RepositoryContext context)
+
         public RepositoryBase(RepositoryContext repositoryContext)
         {
-            _context = context;
+            _context = repositoryContext;
         }
 
         // Sorgu metodları (NoTracking)

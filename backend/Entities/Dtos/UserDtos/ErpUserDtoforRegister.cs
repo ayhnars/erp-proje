@@ -1,7 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Entities.Dtos
-using System.ComponentModel.DataAnnotations;
 
 namespace Entities.Dtos.UserDtos;
 

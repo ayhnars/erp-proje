@@ -16,6 +16,11 @@ namespace erpapi.Infrastructure.Mapper
             CreateMap<CompanyDtoForCreate, Company>();
             CreateMap<CompanyDtoForUpdate, Company>().ReverseMap();
             CreateMap<CompanyDtoForUpdate, Company>();
+            CreateMap<OrderItem, OrderItemDto>().ReverseMap();
+
+            // Order → OrderDetailsDto: Items'ı servis dolduracak
+            CreateMap<Order, OrderDetailsDto>()
+                .ForMember(d => d.Items, opt => opt.Ignore());
 
         }
     }

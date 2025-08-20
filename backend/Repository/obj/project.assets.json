@@ -5798,52 +5798,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Ayhan\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\emree\\.nuget\\packages\\": {},
->>>>>>> origin/dev
+    "C:\\Users\\musta\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Repository.csproj",
+      "projectUniqueName": "F:\\code\\Erp-Project\\erp-proje\\backend\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\obj\\",
-=======
-=======
->>>>>>> order
-      "projectUniqueName": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj",
-      "projectName": "Repository",
-      "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\obj\\",
-<<<<<<< HEAD
->>>>>>> order
-=======
-=======
-      "projectUniqueName": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\Repository.csproj",
-      "projectName": "Repository",
-      "projectPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\emree\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\obj\\",
->>>>>>> origin/dev
->>>>>>> order
+      "projectPath": "F:\\code\\Erp-Project\\erp-proje\\backend\\Repository\\Repository.csproj",
+      "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
+      "outputPath": "F:\\code\\Erp-Project\\erp-proje\\backend\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\Ayhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\emree\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/dev
+        "C:\\Users\\musta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5859,22 +5830,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Entities.csproj"
-=======
-            "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj"
->>>>>>> order
-=======
-            "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj"
-=======
-            "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj"
->>>>>>> origin/dev
->>>>>>> order
+            "F:\\code\\Erp-Project\\erp-proje\\backend\\Entities\\Entities.csproj": {
+              "projectPath": "F:\\code\\Erp-Project\\erp-proje\\backend\\Entities\\Entities.csproj"
             }
           }
         }
@@ -5887,13 +5844,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
-<<<<<<< HEAD
-      "SdkAnalysisLevel": "9.0.200"
-=======
-      "SdkAnalysisLevel": "9.0.300"
->>>>>>> origin/dev
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -5944,12 +5897,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
->>>>>>> origin/dev
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Önbellek dosyası F:\\code\\Erp-Project\\erp-proje\\backend\\Repository\\obj\\project.nuget.cache okunurken bir sorun oluştu : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -3,15 +3,11 @@ using System.Reflection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
-using erpapi.Models;
-=======
 using Entities;                 // ErpUser burada
 using Entities.Models;          // OrderItem, Modules, Order (vb.)
 
 // Alias: Order ismini netleştir
 using OrderEntity = Entities.Models.Order;
->>>>>>> order
 
 namespace Repository
 {
@@ -21,22 +17,6 @@ namespace Repository
         public RepositoryContext(DbContextOptions<RepositoryContext> options)
             : base(options) { }
 
-<<<<<<< HEAD
-        public DbSet<Modules> Modules { get; set; }
-        public DbSet<Order> Orders { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Order>()
-                .Property(o => o.PaymentMethod)
-                .HasConversion<string>();
-
-            modelBuilder.Entity<Order>()
-                .Property(o => o.Status)
-                .HasConversion<string>();
-=======
         // DbSet'ler
         public DbSet<OrderItem> OrderItems { get; set; } = default!;
         public DbSet<Modules> Modules { get; set; } = default!;
@@ -52,7 +32,6 @@ namespace Repository
 
             // Bu assembly içindeki tüm IEntityTypeConfiguration<> sınıflarını uygula
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
->>>>>>> order
         }
     }
 }
