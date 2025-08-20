@@ -1,21 +1,36 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace Entities.Dtos
+using System.ComponentModel.DataAnnotations;
+
+namespace Entities.Dtos.UserDtos;
+
+public class ErpUserDtoforRegister
 {
-    // Sýnýf adýný .NET kuralýna göre düzelttim: ErpUserDtoForRegister
-    public class ErpUserDtoForRegister : ErpUserDto
-    {
-        // Zorunlu alanlar için required kullan
-        [Required]
-        public string ConfirmPassword { get; init; } = string.Empty;
+    [Required(ErrorMessage = "isim zorunludur.")]
+    public string FirstName { get; init; } = string.Empty;
 
-        // Þirket adý ve imza kodu opsiyonelse nullable yap;
-        // opsiyonel deðillerse '?' kaldýrýp string.Empty baþlat.
-        public string? CompanyName { get; init; }
+    [Required(ErrorMessage = "soyisim zorunludur.")]
+    public string LastName { get; init; } = string.Empty;
 
-        // PascalCase: IsBoss
-        public bool IsBoss { get; init; } = false;
+    [Required(ErrorMessage = "Email zorunludur.")]
+    public string Email { get; init; } = string.Empty;
 
-        public string? SignCode { get; init; }
-    }
+
+    [Required(ErrorMessage = "ÅŸirket adÄ± zorunludur.")]
+    public string CompanyName { get; init; } = string.Empty;
+
+    [Required(ErrorMessage = "Telefon numarasÄ± zorunludur.")]
+    public string PhoneNumber { get; init; }
+
+    [Required(ErrorMessage = "Åžifre zorunludur.")]
+    public string Password { get; init; } = string.Empty;
+
+    [Compare("Password", ErrorMessage = "Åžifreler eÅŸleÅŸmiyor.")]
+    public string ConfirmPassword { get; init; } = string.Empty;
+
+    public bool isBoss { get; init; } = false;
+
+    public string RegistrationKey { get; init; } = string.Empty;
+
 }

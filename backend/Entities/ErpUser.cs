@@ -20,7 +20,7 @@ namespace Entities
 
         public string LastName { get; set; } = string.Empty;
 
-        public string? CompanyName { get; set; } = string.Empty;
+        public int? CompanyId { get; set; }
 
         public string? RegistrationKey { get; set; }
 
@@ -28,8 +28,10 @@ namespace Entities
 
         public DateTime? LastActivityTime { get; set; }
 
-        public bool RememberMe { get; set; } = false;
+        public List<string> Tags { get; set; } = new List<string>();
 
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryDate { get; set; }
 
         public string FullName => $"{FirstName} {LastName}".Trim();
 

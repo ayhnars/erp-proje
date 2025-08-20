@@ -112,8 +112,16 @@
               "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj"
               },
+<<<<<<< HEAD
               "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Services\\Services.csproj": {
                 "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Services\\Services.csproj"
+=======
+              "F:\\code\\Erp-Project\\erp-proje\\backend\\Repository\\Repository.csproj": {
+                "projectPath": "F:\\code\\Erp-Project\\erp-proje\\backend\\Repository\\Repository.csproj"
+              },
+              "F:\\code\\Erp-Project\\erp-proje\\backend\\Services\\Services.csproj": {
+                "projectPath": "F:\\code\\Erp-Project\\erp-proje\\backend\\Services\\Services.csproj"
+>>>>>>> origin/dev
               }
             }
           }
@@ -142,9 +150,19 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+<<<<<<< HEAD
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.7, )"
+=======
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+>>>>>>> origin/dev
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -166,6 +184,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
@@ -177,6 +196,17 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[9.0.3, )"
+=======
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.13.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.13.0, )"
+>>>>>>> origin/dev
             }
           },
           "imports": [

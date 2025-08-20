@@ -3,10 +3,16 @@
     "",
     "\\backend",
     "\\backend\\Entities",
-    "\\backend\\Entities\\Models",
-    "\\backend\\erpapi",
-    "\\backend\\erpapi\\Controllers"
+    "\\backend\\Entities\\Dtos",
+    "\\backend\\Entities\\Dtos\\UserDtos",
+    "\\moduls",
+    "\\moduls\\backend",
+    "\\moduls\\backend\\Entities",
+    "\\moduls\\backend\\Entities\\Dtos",
+    "\\moduls\\backend\\Entities\\Dtos\\UserDtos",
+    "\\moduls\\backend\\erpapi",
+    "\\moduls\\backend\\erpapi\\Migrations"
   ],
-  "SelectedNode": "\\backend\\erpapi\\Program.cs",
+  "SelectedNode": "\\moduls\\backend\\Entities\\Dtos\\UserDtos\\ErpUserDtoforRegister.cs",
   "PreviewInSolutionExplorer": false
 }

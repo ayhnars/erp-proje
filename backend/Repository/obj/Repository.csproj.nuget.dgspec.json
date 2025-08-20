@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\obj\\",
+=======
+    "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\Repository.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\emree\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\obj\\",
+>>>>>>> origin/dev
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Ayhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\emree\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/dev
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -45,7 +63,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
+<<<<<<< HEAD
         "SdkAnalysisLevel": "9.0.200"
+=======
+        "SdkAnalysisLevel": "9.0.300"
+>>>>>>> origin/dev
       },
       "frameworks": {
         "net9.0": {
@@ -76,6 +98,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
@@ -88,12 +111,30 @@
         "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Ayhan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Repository\\obj\\",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\emree\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Repository\\obj\\",
+>>>>>>> origin/dev
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Ayhan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\emree\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/dev
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -109,8 +150,13 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj"
+=======
+              "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\Entities\\Entities.csproj"
+>>>>>>> origin/dev
               }
             }
           }
@@ -125,7 +171,11 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
+<<<<<<< HEAD
         "SdkAnalysisLevel": "9.0.200"
+=======
+        "SdkAnalysisLevel": "9.0.300"
+>>>>>>> origin/dev
       },
       "frameworks": {
         "net9.0": {
@@ -176,7 +226,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+>>>>>>> origin/dev
         }
       }
     }
