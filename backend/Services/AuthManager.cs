@@ -31,7 +31,14 @@ namespace Services
 
         public IEnumerable<ErpUser> GetAllUsers()
         {
+<<<<<<< HEAD
             return _userManager.Users.ToList();
+=======
+            var user = await _userManager.FindByNameAsync(userName);
+            if (user == null)
+                throw new Exception("Güncellenmek istenen kullanıcı bulunamadı.");
+            return _mapper.Map<ErpUserDtoForUpdate>(user);
+>>>>>>> 8ca21fc (Ignore build outputs; remove bin/obj and resolve merge noise)
         }
 
         public async Task<ErpUser> GetOneUser(string userName)

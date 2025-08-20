@@ -1,5 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 
+<<<<<<< HEAD
+=======
+namespace Entities.Dtos
+using System.ComponentModel.DataAnnotations;
+
+>>>>>>> 8ca21fc (Ignore build outputs; remove bin/obj and resolve merge noise)
 namespace Entities.Dtos.UserDtos;
 
 public class ErpUserDtoforRegister
