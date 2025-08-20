@@ -1,14 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-using erpapi.Services.Contracts;
-using erpapi.Models;
-using erpapi.Services;
-=======
 using Services.Contrats;
 using Entities.Models;
 using Entities.Dtos;
 using System.Threading.Tasks;
->>>>>>> order
 
 namespace erpapi.Controllers
 {
