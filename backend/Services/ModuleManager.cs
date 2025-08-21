@@ -7,10 +7,12 @@ namespace Services
     public class ModuleManager : IModuleManager
     {
         private readonly ModuleRepository _moduleRepository;
+        private readonly RepositoryManager _repositoryManager;
 
-        public ModuleManager(ModuleRepository moduleRepository)
+        public ModuleManager(ModuleRepository moduleRepository, RepositoryManager repositoryManager)
         {
             _moduleRepository = moduleRepository;
+            _repositoryManager = repositoryManager;
         }
 
         public async Task<IEnumerable<Modules>> GetAllModulesAsync()
@@ -27,12 +29,16 @@ namespace Services
         {
             _moduleRepository.Create(module);
             await Task.CompletedTask;
+            _repositoryManager.Save();
+
         }
 
         public async Task UpdateModuleAsync(Modules module)
         {
             _moduleRepository.Update(module);
             await Task.CompletedTask;
+            _repositoryManager.Save();
+
         }
 
         public async Task DeleteModuleAsync(int id)
@@ -43,6 +49,7 @@ namespace Services
                 _moduleRepository.Delete(module);
             }
             await Task.CompletedTask;
+            _repositoryManager.Save();
         }
     }
 }

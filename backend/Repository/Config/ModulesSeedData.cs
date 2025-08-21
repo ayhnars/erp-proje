@@ -1,18 +1,32 @@
-using System.Collections.Generic;
 using Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-
-namespace ErpProject.Repository.Config
+public class ModulesConfig : IEntityTypeConfiguration<Modules>
 {
-    public static class ModulesSeedData
+    public void Configure(EntityTypeBuilder<Modules> builder)
     {
-        public static List<Modules> GetModules()
-        {
-            return new List<Modules>
+        builder.HasData(
+            new Modules
             {
-                new Modules { Id = 1, ModuleName = "Order", ModuleDescription = "Sales management module", Price = "100" },
-
-            };
-        }
+                Id = 1,
+                ModuleName = "Stok Takibi",
+                ModuleDescription = "Depo ve ürün yönetimi",
+                Icon = "fa-boxes",
+                Price = "149.99",
+                CreatedAt = new DateTime(2023, 1, 1),
+                IsActive = true
+            },
+            new Modules
+            {
+                Id = 2,
+                ModuleName = "Muhasebe",
+                ModuleDescription = "Fatura ve kasa yönetimi",
+                Icon = "fa-calculator",
+                Price = "249.99",
+                CreatedAt = new DateTime(2023, 1, 1),
+                IsActive = true
+            }
+        );
     }
 }

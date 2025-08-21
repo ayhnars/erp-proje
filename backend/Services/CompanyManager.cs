@@ -12,10 +12,12 @@ namespace Services
     public class CompanyManager : ICompanyManager
     {
         private readonly ICompanyRepository _companyRepository;
+        private readonly RepositoryManager _repositoryManager;
 
-        public CompanyManager(ICompanyRepository companyRepository)
+        public CompanyManager(ICompanyRepository companyRepository, RepositoryManager repositoryManager)
         {
             _companyRepository = companyRepository;
+            _repositoryManager = repositoryManager;
         }
 
         public async Task<List<Company>> GetAllCompaniesAsync()
@@ -36,12 +38,15 @@ namespace Services
         public async Task CreateCompanyAsync(Company company)
         {
             _companyRepository.Create(company);
-            
+            _repositoryManager.Save();
+
+
         }
 
         public async Task UpdateCompanyAsync(Company company)
         {
             _companyRepository.Update(company);
+            _repositoryManager.Save();
         }
 
         public async Task DeleteCompanyAsync(int id)
@@ -50,6 +55,7 @@ namespace Services
             if (company != null)
             {
                 _companyRepository.Delete(company);
+                _repositoryManager.Save();
             }
         }
     }

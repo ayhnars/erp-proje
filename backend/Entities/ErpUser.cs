@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+using Microsoft.AspNetCore.Identity;
 
 namespace Entities
 {
@@ -28,7 +29,8 @@ namespace Entities
 
         public DateTime? LastActivityTime { get; set; }
 
-        public List<string> Tags { get; set; } = new List<string>();
+        public int? TagId { get; set; }  // Nullable çünkü bazı kullanıcıların tag'ı olmayabilir
+        public Tag? Tag { get; set; }
 
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryDate { get; set; }
