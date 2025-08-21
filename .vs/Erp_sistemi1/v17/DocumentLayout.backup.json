@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\models\\stockmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:models\\stockmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\controllers\\categoriesapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:controllers\\categoriesapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StockMovement.cs",
+              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\StockMovement.cs",
+              "RelativeDocumentMoniker": "Models\\StockMovement.cs",
+              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\StockMovement.cs",
+              "RelativeToolTip": "Models\\StockMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:24:11.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UygulamaDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Data\\UygulamaDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\UygulamaDbContext.cs",
+              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Data\\UygulamaDbContext.cs",
+              "RelativeToolTip": "Data\\UygulamaDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T16:15:54.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriesApiController.cs",
+              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\CategoriesApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesApiController.cs",
+              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\CategoriesApiController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesApiController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAADwv10AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T13:55:31.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T14:43:13.858Z"
             }
           ]
         }

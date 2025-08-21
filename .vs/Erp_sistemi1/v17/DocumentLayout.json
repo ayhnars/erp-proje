@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\migrations\\202508181612324_addcustomertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:migrations\\202508181612324_addcustomertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|c:\\users\\emree\\desktop\\projeler\\erp-proje\\models\\stockmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:models\\stockmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:data\\uygulamadbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\controllers\\categoriesapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:controllers\\categoriesapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55156682-51D1-48A7-9DB3-2BBB548225FF}|Erp_sistemi1.csproj|solutionrelative:models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,44 +30,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UygulamaDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Data\\UygulamaDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\UygulamaDbContext.cs",
-              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Data\\UygulamaDbContext.cs",
-              "RelativeToolTip": "Data\\UygulamaDbContext.cs",
+              "DocumentIndex": 0,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\Customer.cs",
+              "RelativeToolTip": "Models\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T16:15:54.317Z"
+              "WhenOpened": "2025-08-21T10:22:44.896Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "202508181612324_AddCustomerTable.cs",
-              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Migrations\\202508181612324_AddCustomerTable.cs",
-              "RelativeDocumentMoniker": "Migrations\\202508181612324_AddCustomerTable.cs",
-              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Migrations\\202508181612324_AddCustomerTable.cs",
-              "RelativeToolTip": "Migrations\\202508181612324_AddCustomerTable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "StockMovement.cs",
+              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\StockMovement.cs",
+              "RelativeDocumentMoniker": "Models\\StockMovement.cs",
+              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\StockMovement.cs",
+              "RelativeToolTip": "Models\\StockMovement.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwCMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T16:12:37.798Z",
+              "WhenOpened": "2025-08-21T07:24:11.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CustomersController.cs",
-              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\CustomersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CustomersController.cs",
-              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Controllers\\CustomersController.cs",
-              "RelativeToolTip": "Controllers\\CustomersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Title": "UygulamaDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Data\\UygulamaDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\UygulamaDbContext.cs",
+              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Data\\UygulamaDbContext.cs",
+              "RelativeToolTip": "Data\\UygulamaDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:53:28.842Z"
+              "WhenOpened": "2025-08-18T16:15:54.317Z"
             },
             {
               "$type": "Document",
@@ -96,18 +93,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T14:43:13.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\Models\\Customer.cs",
-              "RelativeToolTip": "Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T13:48:50.213Z"
             }
           ]
         }

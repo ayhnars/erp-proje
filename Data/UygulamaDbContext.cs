@@ -12,5 +12,6 @@ namespace Erp_sistemi1.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<StockMovement> StockMovements { get; set; }
     }
 }
