@@ -38,9 +38,53 @@ namespace erpapi.Extensions
                 .AddDefaultTokenProviders();
         }
 
+        public static async Task SeedAdminAsync(this IServiceProvider serviceProvider)
+        {
+            using var scope = serviceProvider.CreateScope();
+
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ErpUser>>();
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+            string adminRole = "Admin";
+
+            if (!await roleManager.RoleExistsAsync(adminRole))
+            {
+                await roleManager.CreateAsync(new IdentityRole(adminRole));
+            }
+
+            var adminUser = await userManager.FindByEmailAsync("admin@example.com");
+
+            if (adminUser == null)
+            {
+                var user = new ErpUser
+                {
+                    UserName = "admin",
+                    Email = "admin@example.com",
+                    EmailConfirmed = true,
+                    IsActive = true,
+                    FirstName = "Sistem",
+                    LastName = "Yöneticisi",
+                    CompanyId = 0 // Gerekliyse değiştir
+                };
+
+                var result = await userManager.CreateAsync(user, "Admin123!");
+
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(user, adminRole);
+                }
+                else
+                {
+                    var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                    throw new Exception($"Admin kullanıcı oluşturulamadı: {errors}");
+                }
+            }
+        }
+
         public static void ConfigureScopedServices(this IServiceCollection services)
         {
             services.AddScoped<ModuleRepository>();
+            services.AddScoped<RepositoryManager>();
             services.AddScoped<IModuleManager, ModuleManager>();
             services.AddScoped<IAuthManager, AuthManager>();
             services.AddScoped<IJwtHandler, JwtHandler>();

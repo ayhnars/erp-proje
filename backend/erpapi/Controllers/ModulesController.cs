@@ -19,14 +19,14 @@ public class ModuleController : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpGet]
+    [HttpGet("GetAllModules")]
     public async Task<IActionResult> GetAllModules()
     {
         var modules = await _moduleManager.GetAllModulesAsync();
         return Ok(modules);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("get/{id}")]
     public async Task<IActionResult> GetModuleById(int id)
     {
         var module = await _moduleManager.GetModuleByIdAsync(id);
@@ -37,7 +37,7 @@ public class ModuleController : ControllerBase
         return Ok(module);
     }
 
-    [HttpPost]
+    [HttpPost("CreateModule")]
     public async Task<IActionResult> CreateModule([FromBody] ModuleDtoForCreate dto)
     {
         var module = _mapper.Map<Modules>(dto);
@@ -45,7 +45,7 @@ public class ModuleController : ControllerBase
         return CreatedAtAction(nameof(GetModuleById), new { id = module.Id }, module);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("update/{id}")]
     public async Task<IActionResult> UpdateModule(int id, [FromBody] ModuleDtoForUpdate dto)
     {
         var module = _mapper.Map<Modules>(dto);
@@ -55,10 +55,10 @@ public class ModuleController : ControllerBase
         return Ok(updatedModule);
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("delete/{id}")]
     public async Task<IActionResult> DeleteModule(int id)
     {
         await _moduleManager.DeleteModuleAsync(id);
-        return NoContent();
+        return Ok("Module deleted successfully");
     }
 }

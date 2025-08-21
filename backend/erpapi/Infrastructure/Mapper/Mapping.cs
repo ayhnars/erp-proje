@@ -18,11 +18,8 @@ namespace erpapi.Infrastructure.Mapper
             CreateMap<CompanyDtoForCreate, Company>();
             CreateMap<CompanyDtoForUpdate, Company>().ReverseMap();
             CreateMap<CompanyDtoForUpdate, Company>();
-<<<<<<< HEAD
             CreateMap<Modules, ModuleDtoForCreate>().ReverseMap();
             CreateMap<Modules, ModuleDtoForUpdate>().ReverseMap();
-=======
->>>>>>> 8ca21fc (Ignore build outputs; remove bin/obj and resolve merge noise)
 
         }
     }
