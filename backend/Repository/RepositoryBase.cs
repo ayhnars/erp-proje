@@ -13,6 +13,10 @@ namespace Repository
     {
         protected RepositoryContext _context { get; set; }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
         public RepositoryBase(RepositoryContext repositoryContext)
         {
             _context = repositoryContext;

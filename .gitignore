@@ -7,7 +7,31 @@
 **/TestResults/
 
 # Kullanıcı ayar dosyaları
+# Build klasörleri
+**/bin/
+**/obj/
+
+# Yayın klasörleri
+**/publish/
+**/TestResults/
+
+# Kullanıcı ayar dosyaları
 *.user
+*.vspscc
+*.vssscc
+
+# Log dosyaları
+*.log
+
+# Secrets ve dev ayarları
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Entity Framework Core Migration Cache (opsiyonel)
+Migrations/
+
+# Test sonuçları
 *.vspscc
 *.vssscc
 
@@ -26,10 +50,14 @@ Migrations/
 TestResults/
 
 # Temporary dosyalar
+
+# Temporary dosyalar
 *.tmp
 *.bak
 *.old
+*.old
 
+# Sistem dosyaları
 # Sistem dosyaları
 .DS_Store
 Thumbs.db
