@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿// Repository.Contrats/IOrderRepository.cs
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using OrderEntity = Entities.Models.Order;
 
 namespace Repository.Contrats
 {
     public interface IOrderRepository
     {
-        IEnumerable<Entities.Models.Order> GetAllOrders();
-        void CreateOrder(Entities.Models.Order order);
-        Task<Entities.Models.Order?> GetByIdAsync(int id);
-        Task UpdateAsync(Entities.Models.Order entity);
+        IEnumerable<OrderEntity> GetAllOrders();
+        Task<OrderEntity?> GetByIdAsync(int id);
+        void CreateOrder(OrderEntity order);
+        Task UpdateAsync(OrderEntity entity);
     }
 }

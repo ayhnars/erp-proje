@@ -1,14 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-<<<<<<< HEAD
-using erpapi.Models;
-
-namespace erpapi.Models
-=======
 
 namespace Entities.Models
->>>>>>> order
 {
     public enum PaymentMethod
     {
@@ -25,10 +19,7 @@ namespace Entities.Models
         Cancelled
     }
 
-<<<<<<< HEAD
-=======
     [Table("Orders")]
->>>>>>> order
     public class Order
     {
         [Key]
@@ -40,23 +31,10 @@ namespace Entities.Models
         [ForeignKey("Customer")]
         public int CustomerID { get; set; }
 
-<<<<<<< HEAD
-        public DateTime OrderDate { get; set; } = DateTime.Now;
-
-        public DateTime DeliveryDate { get; set; }
-
-        public PaymentMethod PaymentMethod { get; set; }
-
-        public OrderStatus Status { get; set; }
-
-        // Navigation Properties (isteğe bağlı)
-        // public Company Company { get; set; }
-        // public Customer Customer { get; set; }
-=======
         // Sipariş oluşturulduğunda otomatik dolsun
         public DateTime OrderDate { get; set; } = DateTime.Now;
 
-        // Teslim tarihi daha sonra belli olabilir -> nullable yap
+        // Teslim tarihi daha sonra belli olabilir -> nullable
         public DateTime? DeliveryDate { get; set; }
 
         public PaymentMethod PaymentMethod { get; set; } = PaymentMethod.Cash;
@@ -67,6 +45,6 @@ namespace Entities.Models
         // public Company? Company { get; set; }
         // public Customer? Customer { get; set; }
         // public ICollection<OrderItem>? Items { get; set; }
->>>>>>> order
     }
 }
+

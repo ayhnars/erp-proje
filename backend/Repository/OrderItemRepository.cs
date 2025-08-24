@@ -4,24 +4,15 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Entities.Models;
 using Repository.Contrats;
+using Repository;
 
 namespace Repository
 {
     public class OrderItemRepository : RepositoryBase<OrderItem>, IOrderItemRepository
     {
-        private readonly RepositoryContext _context;
+        public OrderItemRepository(RepositoryContext context) : base(context) { }
 
-        public OrderItemRepository(RepositoryContext context) : base(context)
-        {
-            _context = context;
-        }
 
-        // --- Interface'in beklediği metot ---
-        public async Task CreateAsync(OrderItem item)
-        {
-            await _context.Set<OrderItem>().AddAsync(item);
-            await _context.SaveChangesAsync();
-        }
 
         // (İstersen kalsın) Hepsini listeleyen eski metot
         public async Task<IEnumerable<OrderItem>> FindAllAsync()
@@ -69,8 +60,16 @@ namespace Repository
             await _context.SaveChangesAsync();
         }
 
-        // (İstersen kalsın) Eski imza: entity vererek silme
+
+        public async Task CreateAsync(OrderItem item)
+        {
+            await _context.Set<OrderItem>().AddAsync(item);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task DeleteAsync(OrderItem item)
+
+        // (İstersen kalsın) Eski imza: entity vererek silme
         {
             _context.Set<OrderItem>().Remove(item);
             await _context.SaveChangesAsync();

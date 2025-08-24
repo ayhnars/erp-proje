@@ -8,11 +8,17 @@ namespace Services
     {
         public MappingProfile()
         {
+            // OrderItem ↔ OrderItemDto
             CreateMap<OrderItem, OrderItemDto>().ReverseMap();
 
-            // Order → OrderDetailsDto: Items'ı servis dolduracak
+            // Order → OrderDetailsDto (Items servis katmanında doldurulacak)
             CreateMap<Order, OrderDetailsDto>()
                 .ForMember(d => d.Items, opt => opt.Ignore());
+
+            // ModuleCart → ModuleCartDto (Status enum'u string'e çevrilir)
+            CreateMap<ModuleCart, ModuleCartDto>()
+                .ForMember(d => d.Status, m => m.MapFrom(s => s.Status.ToString()));
         }
     }
 }
+

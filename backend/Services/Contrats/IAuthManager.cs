@@ -2,8 +2,7 @@ using Entities;
 using Entities.Dtos;
 using Entities.Dtos.UserDtos;
 using Microsoft.AspNetCore.Identity;
-using Entities;          // ErpUser
-using Entities.Dtos;     // ErpUserDtoForRegister, ErpUserDtoForUpdate, ResetPasswordDto
+
 
 namespace Services.Contrats
 {
@@ -17,7 +16,7 @@ namespace Services.Contrats
 
         Task<ErpUserDtoForUpdate?> GetOneUserForUpdate(string userName);
 
-        Task<IdentityResult> CreateUser(ErpUserDtoForRegister userDto);
+        Task<IdentityResult> CreateUser(ErpUserDtoforRegister userDto);
 
         Task Update(ErpUserDtoForUpdate userDto);
 

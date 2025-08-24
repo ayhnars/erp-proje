@@ -1,67 +1,36 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\erpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|solutionrelative:erpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\erpapi\\contracts\\createmodulecartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|solutionrelative:erpapi\\contracts\\createmodulecartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Services\\OrderService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\OrderService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\migrations\\20250824084654_addmodulecartonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\migrations\\20250824084654_addmodulecartonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E268A2AE-21C2-42F4-B1A4-D47C88E5D479}|Entities\\Entities.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\entities\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E268A2AE-21C2-42F4-B1A4-D47C88E5D479}|Entities\\Entities.csproj|solutionrelative:entities\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Services\\Contrats\\IOrderService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\Contrats\\IOrderService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\erpapi\\erpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|solutionrelative:erpapi\\erpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\migrations\\20250824092759_syncmodulecart_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\migrations\\20250824092759_syncmodulecart_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\repositorycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\repositorycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-=======
->>>>>>> order
-  "WorkspaceRootPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E268A2AE-21C2-42F4-B1A4-D47C88E5D479}|Entities\\Entities.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\moduls\\backend\\entities\\entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E268A2AE-21C2-42F4-B1A4-D47C88E5D479}|Entities\\Entities.csproj|solutionrelative:entities\\entities.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\moduls\\backend\\erpapi\\erpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|solutionrelative:erpapi\\erpapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
->>>>>>> order
+      "AbsoluteMoniker": "D:0:0:{E268A2AE-21C2-42F4-B1A4-D47C88E5D479}|Entities\\Entities.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\entities\\models\\modulecart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E268A2AE-21C2-42F4-B1A4-D47C88E5D479}|Entities\\Entities.csproj|solutionrelative:entities\\models\\modulecart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\repository\\modulecartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A062DE6C-4771-4562-ACAC-28DFC3732AD7}|Repository\\Repository.csproj|solutionrelative:repository\\modulecartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
-=======
-  "WorkspaceRootPath": "C:\\Users\\emree\\Desktop\\projeler\\erp-proje\\backend\\",
-  "Documents": [],
->>>>>>> origin/dev
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -69,202 +38,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "SelectedChildIndex": 6,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Order.cs",
-              "RelativeDocumentMoniker": "Repository\\Order.cs",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Order.cs",
-              "RelativeToolTip": "Repository\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T11:13:17.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Entities\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Models\\Order.cs",
-              "RelativeToolTip": "Entities\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T11:04:00.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Services\\Contrats\\IOrderService.cs",
-              "RelativeDocumentMoniker": "Services\\Contrats\\IOrderService.cs",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Services\\Contrats\\IOrderService.cs",
-              "RelativeToolTip": "Services\\Contrats\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T11:02:13.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "Services\\OrderService.cs",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Services\\OrderService.cs",
-              "RelativeToolTip": "Services\\OrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T11:01:47.633Z",
-=======
-=======
->>>>>>> order
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Entities",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj",
-              "RelativeDocumentMoniker": "Entities\\Entities.csproj",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\Entities\\Entities.csproj",
-              "RelativeToolTip": "Entities\\Entities.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-08T08:32:47.294Z",
->>>>>>> order
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-<<<<<<< HEAD
-              "Title": "IOrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\IOrderRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\IOrderRepository.cs",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\IOrderRepository.cs",
-              "RelativeToolTip": "Repository\\IOrderRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "Title": "CreateModuleCartRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\Contracts\\CreateModuleCartRequest.cs",
+              "RelativeDocumentMoniker": "erpapi\\Contracts\\CreateModuleCartRequest.cs",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\Contracts\\CreateModuleCartRequest.cs",
+              "RelativeToolTip": "erpapi\\Contracts\\CreateModuleCartRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T11:00:38.2Z",
+              "WhenOpened": "2025-08-24T10:01:01.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OrderRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\OrderRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\OrderRepository.cs",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\OrderRepository.cs",
-              "RelativeToolTip": "Repository\\OrderRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\Program.cs",
+              "RelativeDocumentMoniker": "erpapi\\Program.cs",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\Program.cs",
+              "RelativeToolTip": "erpapi\\Program.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAswJwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T09:35:39.416Z",
+              "WhenOpened": "2025-08-24T09:47:38.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RepositoryBase.cs",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\RepositoryBase.cs",
-              "RelativeDocumentMoniker": "Repository\\RepositoryBase.cs",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\RepositoryBase.cs",
-              "RelativeToolTip": "Repository\\RepositoryBase.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "20250824092759_SyncModuleCart_Model.cs",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Migrations\\20250824092759_SyncModuleCart_Model.cs",
+              "RelativeDocumentMoniker": "Repository\\Migrations\\20250824092759_SyncModuleCart_Model.cs",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Migrations\\20250824092759_SyncModuleCart_Model.cs",
+              "RelativeToolTip": "Repository\\Migrations\\20250824092759_SyncModuleCart_Model.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T09:34:48.758Z",
+              "WhenOpened": "2025-08-24T09:28:29.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "20250824084654_AddModuleCartOnly.cs",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Migrations\\20250824084654_AddModuleCartOnly.cs",
+              "RelativeDocumentMoniker": "Repository\\Migrations\\20250824084654_AddModuleCartOnly.cs",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Migrations\\20250824084654_AddModuleCartOnly.cs",
+              "RelativeToolTip": "Repository\\Migrations\\20250824084654_AddModuleCartOnly.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAswFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T08:58:19.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModuleCart.cs",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Models\\ModuleCart.cs",
+              "RelativeDocumentMoniker": "Entities\\Models\\ModuleCart.cs",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Models\\ModuleCart.cs",
+              "RelativeToolTip": "Entities\\Models\\ModuleCart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T08:17:52.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RepositoryContext.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\RepositoryContext.cs",
               "RelativeDocumentMoniker": "Repository\\RepositoryContext.cs",
               "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\RepositoryContext.cs",
               "RelativeToolTip": "Repository\\RepositoryContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T09:34:48.024Z",
+              "WhenOpened": "2025-08-24T08:01:42.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "erpapi",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\erpapi.csproj",
-              "RelativeDocumentMoniker": "erpapi\\erpapi.csproj",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\erpapi.csproj",
-              "RelativeToolTip": "erpapi\\erpapi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T09:27:48.032Z",
+              "DocumentIndex": 6,
+              "Title": "ModuleCartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\ModuleCartRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ModuleCartRepository.cs",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\ModuleCartRepository.cs",
+              "RelativeToolTip": "Repository\\ModuleCartRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T08:01:00.682Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Repository",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Repository.csproj",
-              "RelativeDocumentMoniker": "Repository\\Repository.csproj",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Repository.csproj",
-              "RelativeToolTip": "Repository\\Repository.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-06T09:27:45.908Z",
-              "EditorCaption": ""
-=======
-              "Title": "erpapi",
-              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\erpapi\\erpapi.csproj",
-              "RelativeDocumentMoniker": "erpapi\\erpapi.csproj",
-              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\moduls\\backend\\erpapi\\erpapi.csproj",
-              "RelativeToolTip": "erpapi\\erpapi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-08T08:30:12.911Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         },
         {
-          "DockedWidth": 200,
-=======
->>>>>>> origin/dev
+          "DockedWidth": 1506,
           "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-<<<<<<< HEAD
->>>>>>> order
-=======
-<<<<<<< HEAD
-=======
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
->>>>>>> origin/dev
->>>>>>> order
             }
           ]
         }

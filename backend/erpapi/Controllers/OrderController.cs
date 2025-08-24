@@ -1,14 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-using erpapi.Services.Contracts;
-using erpapi.Models;
-using erpapi.Services;
-=======
 using Services.Contrats;
 using Entities.Models;
 using Entities.Dtos;
 using System.Threading.Tasks;
->>>>>>> order
 
 namespace erpapi.Controllers
 {
@@ -23,10 +17,7 @@ namespace erpapi.Controllers
             _orderService = orderService;
         }
 
-<<<<<<< HEAD
-=======
-        // Var olan uçlar (liste + create)
->>>>>>> order
+        // Listele
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -34,21 +25,19 @@ namespace erpapi.Controllers
             return Ok(orders);
         }
 
+        // Oluştur
         [HttpPost]
-<<<<<<< HEAD
-        public IActionResult Create(Order order)
-=======
         public IActionResult Create([FromBody] Order order)
->>>>>>> order
         {
+            if (order is null) return BadRequest("Order body boş.");
             _orderService.CreateOrder(order);
-            return Ok(order);
-        }
-<<<<<<< HEAD
-=======
 
-        // --- Yeni uçlar: Detay + Güncelle ---
-        // /api/order/{id}/details
+            // Eğer detay endpoint’in varsa CreatedAtAction güzel olur;
+            // yoksa sadece Ok(order) dönebilirsin.
+            return CreatedAtAction(nameof(GetDetails), new { id = order.OrderID }, order);
+        }
+
+        // Detay (serviste varsa)
         [HttpGet("{id}/details")]
         public async Task<ActionResult<OrderDetailsDto>> GetDetails(int id)
         {
@@ -57,14 +46,13 @@ namespace erpapi.Controllers
             return Ok(dto);
         }
 
-        // /api/order/{id}
+        // Güncelle (serviste varsa)
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] OrderDetailsDto dto)
         {
-            if (id != dto.OrderID) return BadRequest("Mismatched id");
+            if (dto is null || id != dto.OrderID) return BadRequest("Id eşleşmiyor.");
             await _orderService.UpdateOrderAsync(dto);
             return NoContent();
         }
->>>>>>> order
     }
 }

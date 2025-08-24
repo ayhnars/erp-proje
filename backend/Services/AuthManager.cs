@@ -3,10 +3,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Logging;
 using Services.Contrats;
 using Entities;          // ErpUser
-using Entities.Dtos;     // DTO'lar
+using Entities.Dtos;
+using Entities.Dtos.UserDtos;
 
 namespace Services
 {
@@ -15,8 +15,6 @@ namespace Services
         private readonly UserManager<ErpUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IMapper _mapper;
-        private readonly ILogger<AuthManager> _logger;
-
         private readonly IJwtHandler _jwtHandler;
 
         public AuthManager(UserManager<ErpUser> userManager,
@@ -35,35 +33,44 @@ namespace Services
         public IEnumerable<ErpUser> GetAllUsers()
             => _userManager.Users.ToList();
 
-        public async Task<ErpUser?> GetOneUser(string userName)
-            => await _userManager.FindByNameAsync(userName);
-
-        public async Task<ErpUserDtoForUpdate?> GetOneUserForUpdate(string userName)
+        public async Task<ErpUser> GetOneUser(string userName)
         {
             var user = await _userManager.FindByNameAsync(userName);
-            if (user == null)
-                throw new Exception("Güncellenmek istenen kullanıcı bulunamadı.");
+            if (user is null) throw new System.Exception("Kullanıcı bulunamadı.");
+            return user;
+        }
+
+        public async Task<ErpUserDtoForUpdate> GetOneUserForUpdate(string userName)
+        {
+            var user = await _userManager.FindByNameAsync(userName);
+            if (user is null)
+                throw new System.Exception("Güncellenmek istenen kullanıcı bulunamadı.");
             return _mapper.Map<ErpUserDtoForUpdate>(user);
         }
 
-        public async Task<IdentityResult> CreateUser(ErpUserDtoForRegister userDto)
+        public async Task<IdentityResult> CreateUser(ErpUserDtoforRegister userDto)
         {
             var user = _mapper.Map<ErpUser>(userDto);
 
             var result = await _userManager.CreateAsync(user, userDto.Password);
             if (!result.Succeeded) return result;
 
-            if (result.Succeeded)
-            {
-                await _userManager.AddToRoleAsync(user,userDto.isBoss ?  "Manager" : "Employee"); // varsayılan rol
-            }
+            // isBoss'a göre rol seç
+            var roleName = userDto.isBoss ? "Manager" : "Employee";
 
-            await _userManager.AddToRoleAsync(user, defaultRole);
+            // Rol yoksa oluştur
+            if (!await _roleManager.RoleExistsAsync(roleName))
+                await _roleManager.CreateAsync(new IdentityRole(roleName));
+
+            // Kullanıcıyı role ekle
+            await _userManager.AddToRoleAsync(user, roleName);
+
             return result;
         }
 
         public async Task Update(ErpUserDtoForUpdate userDto)
         {
+            // UserName olarak email kullanıyorsan sorun yok; aksi halde FindByName yerine FindByEmail kullan.
             var user = await _userManager.FindByNameAsync(userDto.Email);
             if (user == null) return;
 
@@ -89,6 +96,7 @@ namespace Services
 
             return await _userManager.DeleteAsync(user);
         }
+
         public async Task<TokenDto?> LoginAsync(ErpUserDtoForLogin loginDto)
         {
             var user = await _userManager.FindByEmailAsync(loginDto.Email);
@@ -99,19 +107,17 @@ namespace Services
             if (!isPasswordValid)
                 return null;
 
-            // Kullanıcının rollerini çekiyoruz
             var roles = await _userManager.GetRolesAsync(user);
 
-            // Token oluşturuluyor
             var token = _jwtHandler.CreateToken(user, roles.ToList());
 
-            // Refresh token da üretiliyor
             user.RefreshToken = token.RefreshToken;
             user.RefreshTokenExpiryDate = token.RefreshTokenExpiration;
             await _userManager.UpdateAsync(user);
 
             return token;
         }
+
         public async Task<bool> LogoutAsync(string userId)
         {
             var user = await _userManager.FindByIdAsync(userId);
@@ -124,6 +130,5 @@ namespace Services
             var result = await _userManager.UpdateAsync(user);
             return result.Succeeded;
         }
-
     }
 }
