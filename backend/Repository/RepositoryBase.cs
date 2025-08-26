@@ -9,54 +9,39 @@ using Entities;
 
 namespace Repository
 {
-    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    // Tüm repo'larınız RepositoryContext kullanıyorsa tip güvenliği için DbContext yerine bunu kullanmak daha iyi.
+    public abstract class RepositoryBase<T> where T : class
     {
-        protected RepositoryContext RepositoryContext { get; set; }
+        protected readonly RepositoryContext _context;
+
 
         public RepositoryBase(RepositoryContext repositoryContext)
         {
-            RepositoryContext = repositoryContext;
+            _context = repositoryContext;
         }
 
+        // Sorgu metodları (NoTracking)
         public IQueryable<T> FindAll()
-        {
-            return RepositoryContext.Set<T>().AsNoTracking();
-        }
+            => _context.Set<T>().AsNoTracking();
 
-        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression)
-        {
-            return RepositoryContext.Set<T>().Where(expression).AsNoTracking();
-        }
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> predicate)
+            => _context.Set<T>().Where(predicate).AsNoTracking();
 
-        public void Create(T entity)
-        {
-            RepositoryContext.Set<T>().Add(entity);
-            // Eğer DbContext'in değişikliklerini hemen kaydetmek istiyorsan
-            RepositoryContext.SaveChanges();
-        }
+        // Değişiklik metodları (Save'i bilerek burada yapmıyoruz; UnitOfWork/Service tarafında çağrılır)
+        public void Create(T entity) => _context.Set<T>().Add(entity);
+        public void Update(T entity) => _context.Set<T>().Update(entity);
+        public void Delete(T entity) => _context.Set<T>().Remove(entity);
 
-        public void Update(T entity)
-        {
-            RepositoryContext.Set<T>().Update(entity);
-            RepositoryContext.SaveChanges();
-
-        }
-
-        public void Delete(T entity)
-        {
-            RepositoryContext.Set<T>().Remove(entity);
-            RepositoryContext.SaveChanges();
-
-        }
-
+        // Async yardımcılar
         public async Task<List<T>> GetAllAsync()
-        {
-            return await RepositoryContext.Set<T>().ToListAsync();
-        }
+            => await _context.Set<T>().AsNoTracking().ToListAsync();
 
-        public async Task<T> GetByIdAsync(object id)
-        {
-            return await RepositoryContext.Set<T>().FindAsync(id);
-        }
+        // Bulamazsa null dönebilir -> T? kullan
+        public async Task<T?> GetByIdAsync(object id)
+            => await _context.Set<T>().FindAsync(id);
+
+        // İstersen ortak Save
+        public Task<int> SaveChangesAsync()
+            => _context.SaveChangesAsync();
     }
 }

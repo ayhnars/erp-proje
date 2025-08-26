@@ -11,13 +11,16 @@ namespace erpapi.Infrastructure.Mapper
     {
         public Mapping()
         {
-            // ErpUser mapping'leri
-            CreateMap<ErpUser, ErpUserDtoForUpdate>();
             CreateMap<ErpUser, ErpUserDtoForUpdate>().ReverseMap();
             CreateMap<ErpUserDtoforRegister, ErpUser>().ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email));
             CreateMap<CompanyDtoForCreate, Company>();
             CreateMap<CompanyDtoForUpdate, Company>().ReverseMap();
             CreateMap<CompanyDtoForUpdate, Company>();
+            CreateMap<OrderItem, OrderItemDto>().ReverseMap();
+
+            // Order → OrderDetailsDto: Items'ı servis dolduracak
+            CreateMap<Order, OrderDetailsDto>()
+                .ForMember(d => d.Items, opt => opt.Ignore());
 
         }
     }
