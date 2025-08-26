@@ -33,3 +33,5 @@ TestResults/
 # Sistem dosyaları
 .DS_Store
 Thumbs.db
+/backend/.vs/ErpApp/FileContentIndex/5efdc02d-1619-49e1-a50b-beb29432bad7.vsidx
+*.vsidx
