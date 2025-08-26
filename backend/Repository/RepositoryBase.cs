@@ -1,3 +1,4 @@
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -22,11 +23,22 @@ namespace Repository
         {
             return RepositoryContext.Set<T>().AsNoTracking();
         }
+        // TrackChanges destekli FindAll (eklenen)
+        public IQueryable<T> FindAll(bool trackChanges) =>
+            !trackChanges ? RepositoryContext.Set<T>().AsNoTracking() : RepositoryContext.Set<T>();
+
+
 
         public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression)
         {
             return RepositoryContext.Set<T>().Where(expression).AsNoTracking();
         }
+
+        // TrackChanges destekli FindByCondition (eklenen)
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges) =>
+            !trackChanges ? RepositoryContext.Set<T>().Where(expression).AsNoTracking()
+                          : RepositoryContext.Set<T>().Where(expression);
+
 
         public void Create(T entity)
         {

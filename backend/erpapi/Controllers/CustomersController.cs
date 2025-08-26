@@ -1,80 +1,90 @@
-﻿using Erp_sistemi1.Models;
-using Erp_sistemi1.Data;
-using System.Linq;
-using System.Net;
-using System.Web.Http;
+﻿using AutoMapper;
+using Entities.Dtos.CustomerDtos;
+using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Services.Contracts;
 
-namespace Erp_sistemi1.Controllers.Api
+namespace erpapi.Controllers
 {
-    [RoutePrefix("api/customers")]
-    public class CustomersController : ApiController
+    [ApiController]
+    [Route("api/customers")]
+   // [Authorize] // Gerekirse kaldırılabilir veya rol bazlı eklenebilir
+    public class CustomersController : ControllerBase
     {
-        private readonly UygulamaDbContext _context = new UygulamaDbContext();
+        private readonly ICustomerManager _customerManager;
+        private readonly IMapper _mapper;
 
-        // GET api/customers
-        [HttpGet, Route("")]
-        public IHttpActionResult GetCustomers()
+        public CustomersController(ICustomerManager customerManager, IMapper mapper)
         {
-            var customers = _context.Customers.ToList();
-            return Ok(customers);
+            _customerManager = customerManager;
+            _mapper = mapper;
         }
 
-        // GET api/customers/5
-        [HttpGet, Route("{id:int}")]
-        public IHttpActionResult GetCustomer(int id)
+        // GET: api/Customers
+        [HttpGet]
+        public async Task<IActionResult> GetCustomers()
         {
-            var customer = _context.Customers.Find(id);
+            var customers = await _customerManager.GetAllAsync();
+            var customerDtos = _mapper.Map<IEnumerable<CustomerDto>>(customers);
+            return Ok(customerDtos);
+        }
+
+        // GET: api/Customers/5
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetCustomer(int id)
+        {
+            var customer = await _customerManager.GetByIdAsync(id);
             if (customer == null)
                 return NotFound();
 
-            return Ok(customer);
+            var dto = _mapper.Map<CustomerDto>(customer);
+            return Ok(dto);
         }
 
-        // POST api/customers
-        [HttpPost, Route("")]
-        public IHttpActionResult CreateCustomer(Customer customer)
+        // POST: api/Customers
+        [HttpPost]
+        public async Task<IActionResult> CreateCustomer([FromBody] CustomerDtoForInsert dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
+            var customer = _mapper.Map<Customer>(dto);
+            await _customerManager.CreateAsync(customer);
 
-            return Content(HttpStatusCode.Created, customer);
+            return Ok(new { message = "Müşteri başarıyla eklendi." });
         }
 
-        // PUT api/customers/5
-        [HttpPut, Route("{id:int}")]
-        public IHttpActionResult UpdateCustomer(int id, Customer updatedCustomer)
+        // PUT: api/Customers/5
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> UpdateCustomer(int id, [FromBody] CustomerDtoForUpdate dto)
         {
-            var customer = _context.Customers.Find(id);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (id != dto.CustomerID)
+                return BadRequest(new { message = "ID uyuşmuyor." });
+
+            var customer = await _customerManager.GetByIdAsync(id);
             if (customer == null)
                 return NotFound();
 
-            customer.CustomerCode = updatedCustomer.CustomerCode;
-            customer.CustomerName = updatedCustomer.CustomerName;
-            customer.Phone = updatedCustomer.Phone;
-            customer.Email = updatedCustomer.Email;
-            customer.Address = updatedCustomer.Address;
-            customer.CompanyID = updatedCustomer.CompanyID;
+            _mapper.Map(dto, customer);
+            await _customerManager.UpdateAsync(customer);
 
-            _context.SaveChanges();
-
-            return Ok(customer);
+            return Ok(new { message = "Müşteri başarıyla güncellendi." });
         }
 
-        // DELETE api/customers/5
-        [HttpDelete, Route("{id:int}")]
-        public IHttpActionResult DeleteCustomer(int id)
+        // DELETE: api/Customers/5
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteCustomer(int id)
         {
-            var customer = _context.Customers.Find(id);
+            var customer = await _customerManager.GetByIdAsync(id);
             if (customer == null)
                 return NotFound();
 
-            _context.Customers.Remove(customer);
-            _context.SaveChanges();
-
-            return StatusCode(HttpStatusCode.NoContent);
+            await _customerManager.DeleteAsync(customer);
+            return Ok(new { message = "Müşteri başarıyla silindi." });
         }
     }
 }

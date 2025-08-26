@@ -1,99 +1,95 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-
-using Erp_sistemi1.Models;
+﻿using AutoMapper;
+using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Services.Contrats;
+using Services.Contracts;
+using Entities.Dtos.ProductDtos;
 
-namespace Erp_sistemi1.Controllers.Api
+namespace erpapi.Controllers
 {
+    [ApiController]
     [Route("api/products")]
+
     public class ProductsController : ControllerBase
     {
-        private readonly IAuthManager _authManager;
+        private readonly IProductManager _productManager;
+        private readonly IMapper _mapper;
 
-        public ProductsController(IAuthManager authManager)
+        public ProductsController(IProductManager productManager, IMapper mapper)
         {
-            _authManager = authManager;
+            _productManager = productManager;
+            _mapper = mapper;
         }
 
-        // GET: api/products
+        // GET: api/Products
         [HttpGet]
-        [Route("")]
-        public IActionResult GetProducts()
+        public async Task<IActionResult> GetProducts()
         {
-            return Ok(products);
+            var products = await _productManager.GetAllAsync();
+            var productDtos = GetProductDtos(products);
+            return Ok(productDtos);
         }
 
-        // GET: api/products/5
-        [HttpGet]
-        [Route("{id:int}")]
-        public IActionResult GetProduct(int id)
+        private IEnumerable<ProductDto> GetProductDtos(IEnumerable<Product> products)
         {
-            var product = _context.Products.Find(id);
+            return _mapper.Map<IEnumerable<ProductDto>>(products);
+        }
+
+        // GET: api/Products/5
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetProduct(int id)
+        {
+            var product = await _productManager.GetByIdAsync(id);
             if (product == null)
                 return NotFound();
 
-            return Ok(product);
+            var dto = _mapper.Map<ProductDto>(product);
+            return Ok(dto);
         }
 
-        // POST: api/products
+        // POST: api/Products
         [HttpPost]
-        [Route("")]
-        public IActionResult CreateProduct(Product product)
+        public async Task<IActionResult> CreateProduct([FromBody] ProductDtoForInsert dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            product.CreatedAt = DateTime.Now;
-            _context.Products.Add(product);
-            _context.SaveChanges();
+            var product = _mapper.Map<Product>(dto);
+            await _productManager.CreateAsync(product);
 
-            return Created(new Uri(Request.RequestUri + "/" + product.ProductID), product);
+            return Ok(new { message = "Ürün başarıyla eklendi." });
         }
 
-        // PUT: api/products/5
-        [HttpPut]
-        [Route("{id:int}")]
-        public IActionResult UpdateProduct(int id, Product product)
+        // PUT: api/Products/5
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductDtoForUpdate dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var productInDb = _context.Products.Find(id);
-            if (productInDb == null)
+            if (id != dto.ProductID)
+                return BadRequest(new { message = "ID uyuşmuyor." });
+
+            var product = await _productManager.GetByIdAsync(id);
+            if (product == null)
                 return NotFound();
 
-            productInDb.CompanyID = product.CompanyID;
-            productInDb.CategoryID = product.CategoryID;
-            productInDb.ProductName = product.ProductName;
-            productInDb.ProductCode = product.ProductCode;
-            productInDb.Quantity = product.Quantity;
-            productInDb.UnitType = product.UnitType;
-            productInDb.MinStockLevel = product.MinStockLevel;
-            productInDb.SellPrice = product.SellPrice;
-            productInDb.BuyPrice = product.BuyPrice;
-            productInDb.ProductDescription = product.ProductDescription;
-            productInDb.UpdatedAt = DateTime.Now;
+            _mapper.Map(dto, product);
+            await _productManager.UpdateAsync(product);
 
-            _context.SaveChanges();
-            return StatusCode(HttpStatusCode.NoContent);
+            return Ok(new { message = "Ürün başarıyla güncellendi." });
         }
 
-        // DELETE: api/products/5
-        [HttpDelete]
-        [Route("{id:int}")]
-        public IHttpActionResult DeleteProduct(int id)
+        // DELETE: api/Products/5
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteProduct(int id)
         {
-            var productInDb = _context.Products.Find(id);
-            if (productInDb == null)
+            var product = await _productManager.GetByIdAsync(id);
+            if (product == null)
                 return NotFound();
 
-            _context.Products.Remove(productInDb);
-            _context.SaveChanges();
-
-            return Ok();
+            await _productManager.DeleteAsync(product);
+            return Ok(new { message = "Ürün başarıyla silindi." });
         }
     }
 }

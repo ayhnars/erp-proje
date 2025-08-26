@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Erp_sistemi1.Models
+namespace Entities.Models
 {
     public enum CategoryType
     {
@@ -28,5 +29,8 @@ namespace Erp_sistemi1.Models
         public bool IsActive { get; set; } = true;
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        //  Navigation Property (Bir kategoriye bağlı birden çok ürün olabilir)
+        public ICollection<Product> Products { get; set; }
     }
 }

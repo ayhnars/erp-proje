@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Erp_sistemi1.Models
+namespace Entities.Models
 {
     [Table("StockMovements")]
     public class StockMovement
@@ -15,8 +15,12 @@ namespace Erp_sistemi1.Models
         public int ProductID { get; set; }
 
         [Required]
+        [ForeignKey("Customer")]
+        public int CustomerID { get; set; }
+
+        [Required]
         [ForeignKey("User")]
-        public int UserID { get; set; }
+        public string UserID { get; set; }  // Identity kullanıldığı için genelde string olur
 
         [Required]
         public string MovementType { get; set; } // In, Out, Correction
@@ -29,10 +33,11 @@ namespace Erp_sistemi1.Models
         [Required]
         public DateTime MovementDate { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        // Navigation Properties
+        //  Navigation Properties
         public virtual Product Product { get; set; }
-        public virtual User User { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual ErpUser User { get; set; } // Identity User
     }
 }

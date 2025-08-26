@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Erp_sistemi1.Models
+namespace Entities.Models
 {
     public class Product
     {
@@ -34,5 +36,11 @@ namespace Erp_sistemi1.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime? UpdatedAt { get; set; }
+
+        // Navigation Property (Bir ürün bir kategoriye ait)
+        public Category Category { get; set; }
+
+        // Navigation Property (Bir ürünün birçok stok hareketi olabilir)
+        public ICollection<StockMovement> StockMovements { get; set; }
     }
 }

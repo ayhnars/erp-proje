@@ -1,119 +1,78 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Http.Description;
-using Erp_sistemi1.Data;
-using Erp_sistemi1.Models;
+﻿using AutoMapper;
+using Entities.Dtos.CategoryDtos;
+using Entities.Models;
+using Microsoft.AspNetCore.Mvc;
+using Services.Contracts;
 
-namespace Erp_sistemi1.Controllers
+namespace erpapi.Controllers
 {
-    public class CategoriesApiController : ApiController
+    [ApiController]
+    [Route("api/categoriesapi")] // küçük harfli manuel route kullanmak güvenli
+    public class CategoriesApiController : ControllerBase
     {
-        private UygulamaDbContext db = new UygulamaDbContext();
+        private readonly ICategoryManager _categoryManager;
+        private readonly IMapper _mapper;
 
-        // GET: api/CategoriesApiController
-        public IQueryable<Category> GetCategories()
+        public CategoriesApiController(ICategoryManager categoryManager, IMapper mapper)
         {
-            return db.Categories;
+            _categoryManager = categoryManager;
+            _mapper = mapper;
         }
 
-        // GET: api/CategoriesApiController/5
-        [ResponseType(typeof(Category))]
-        public IHttpActionResult GetCategory(int id)
+        [HttpGet]
+        public async Task<IActionResult> GetCategories()
         {
-            Category category = db.Categories.Find(id);
+            var categories = await _categoryManager.GetAllAsync();
+            return Ok(categories);
+        }
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetCategory(int id)
+        {
+            var category = await _categoryManager.GetByIdAsync(id);
             if (category == null)
-            {
                 return NotFound();
-            }
 
             return Ok(category);
         }
 
-        // PUT: api/CategoriesApiController/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutCategory(int id, Category category)
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory([FromBody] CategoryDtoForInsert dto)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            if (id != category.CategoryID)
-            {
-                return BadRequest();
-            }
+            var category = _mapper.Map<Category>(dto);
+            await _categoryManager.CreateAsync(category);
 
-            db.Entry(category).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CategoryExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
+            return Ok(new { message = "Kategori başarıyla eklendi." });
         }
 
-        // POST: api/CategoriesApiController
-        [ResponseType(typeof(Category))]
-        public IHttpActionResult PostCategory(Category category)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> UpdateCategory(int id, [FromBody] CategoryDtoForUpdate dto)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            db.Categories.Add(category);
-            db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = category.CategoryID }, category);
-        }
-
-        // DELETE: api/CategoriesApiController/5
-        [ResponseType(typeof(Category))]
-        public IHttpActionResult DeleteCategory(int id)
-        {
-            Category category = db.Categories.Find(id);
+            var category = await _categoryManager.GetByIdAsync(id);
             if (category == null)
-            {
                 return NotFound();
-            }
 
-            db.Categories.Remove(category);
-            db.SaveChanges();
+            _mapper.Map(dto, category);
+            await _categoryManager.UpdateAsync(category);
 
-            return Ok(category);
+            return Ok(new { message = "Kategori başarıyla güncellendi." });
         }
 
-        protected override void Dispose(bool disposing)
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteCategory(int id)
         {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+            var category = await _categoryManager.GetByIdAsync(id);
+            if (category == null)
+                return NotFound();
 
-        private bool CategoryExists(int id)
-        {
-            return db.Categories.Count(e => e.CategoryID == id) > 0;
+            await _categoryManager.DeleteAsync(category);
+            return Ok(new { message = "Kategori başarıyla silindi." });
         }
     }
 }

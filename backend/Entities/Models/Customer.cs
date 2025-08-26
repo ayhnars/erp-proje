@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Erp_sistemi1.Models
+namespace Entities.Models
 {
     [Table("Customers")]
     public class Customer
@@ -29,5 +30,8 @@ namespace Erp_sistemi1.Models
         public string Address { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        //  Navigation Property (Bir müşteri birçok stok hareketine sahip olabilir)
+        public ICollection<StockMovement> StockMovements { get; set; }
     }
 }
