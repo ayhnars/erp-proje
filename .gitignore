@@ -1,39 +1,9 @@
-# Build klasörleri
+.vs/
 **/bin/
 **/obj/
-
-# Yayın klasörleri
-**/publish/
-**/TestResults/
-
-# Kullanıcı ayar dosyaları
 *.user
-*.vspscc
-*.vssscc
-
-# Log dosyaları
-*.log
-
-# Secrets ve dev ayarları
-appsettings.Development.json
-appsettings.Local.json
-secrets.json
-
-# Entity Framework Core Migration Cache (opsiyonel)
-Migrations/
-
-# Test sonuçları
-TestResults/
-
-# Temporary dosyalar
-*.tmp
-*.bak
-*.old
-
-# Sistem dosyaları
-.DS_Store
-Thumbs.db
-/backend/.vs/ErpApp/FileContentIndex
-/.gitignore
-/.gitignore
-/.gitignore
+*.suo
+*.userosscache
+*.sln.docstates
+*.dll
+*.pdb

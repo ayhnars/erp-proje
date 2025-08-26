@@ -1,4 +1,3 @@
-using System.Text;
 using Entities;
 using Infrastructure.Configuration;
 using Microsoft.AspNetCore.Identity;
@@ -6,11 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Repositories;
+using Repositories.Contracts;
 using Repository;
 using Repository.Contrats;
 using Services;
+using Services.Contracts;
 using Services.Contrats;
 using Services.Utilities;
+using System.Text;
 
 namespace erpapi.Extensions
 {
@@ -46,6 +49,24 @@ namespace erpapi.Extensions
             services.AddScoped<IJwtHandler, JwtHandler>();
             services.AddScoped<ICompanyManager, CompanyManager>();
             services.AddScoped<ICompanyRepository, CompanyRepository>();
+
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
+
+            // 📌 Category
+            services.AddScoped<ICategoryManager, CategoryManager>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            // 📌 Product
+            services.AddScoped<IProductManager, ProductManager>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+
+            // 📌 Customer
+            services.AddScoped<ICustomerManager, CustomerManager>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+            // 📌 StockMovementD
+            services.AddScoped<IStockMovementManager, StockMovementManager>();
+            services.AddScoped<IStockMovementRepository, StockMovementRepository>();
         }
 
         public static void ConfigureCaching(this IServiceCollection services)
@@ -89,5 +110,3 @@ namespace erpapi.Extensions
 
     }
 }
-
-

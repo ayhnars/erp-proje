@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("erpapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34ecc936264a71730b0ea897db484bbb24d4c41d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+300e1077e2402b1563ba67cbc50f91f02b1b2434")]
 [assembly: System.Reflection.AssemblyProductAttribute("erpapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("erpapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
