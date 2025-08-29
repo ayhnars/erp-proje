@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Entities; // ErpUser
 
@@ -30,8 +31,14 @@ namespace Entities.Models
 
         public CartStatus Status { get; set; } = CartStatus.Pending;
 
+        
+
+
         // ---- Navigations ----
         public ErpUser? User { get; set; }
         public Company? Company { get; set; }
+
+        // ---- Yeni navigation: Payments ----
+        public ICollection<Payment> Payments { get; set; } = new List<Payment>();
     }
 }

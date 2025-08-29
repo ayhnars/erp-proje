@@ -14,7 +14,6 @@ using Services;                       // ModuleCartManager, vb.
 using Services.Contrats;              // IModuleCartManager, vb.
 
 using Entities.Models;                // ModuleCart, Company, CartStatus
-using Microsoft.EntityFrameworkCore;  // AsNoTracking, FirstOrDefaultAsync
 using erpapi.Contracts;               // <-- CreateModuleCartRequest (yeni dosya)
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,6 +39,10 @@ builder.Services.AddScoped<IModuleManager, ModuleManager>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IModuleCartRepository, ModuleCartRepository>();
 builder.Services.AddScoped<IModuleCartManager, ModuleCartManager>();
+
+// ---- Payments ----
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+builder.Services.AddScoped<IPaymentManager, PaymentManager>();
 
 builder.Services.AddControllers();
 

@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\App_Start\\FilterConfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\erpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|solutionrelative:erpapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|c:\\users\\ayhan\\desktop\\erp_proje\\erp_sistemi1\\backend\\erpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48F321DA-F329-4757-B669-64D5B908E079}|erpapi\\erpapi.csproj|solutionrelative:erpapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +61,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FilterConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\App_Start\\FilterConfig.cs",
+              "RelativeDocumentMoniker": "..\\App_Start\\FilterConfig.cs",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\App_Start\\FilterConfig.cs",
+              "RelativeToolTip": "..\\App_Start\\FilterConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T12:05:26.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\appsettings.json",
+              "RelativeDocumentMoniker": "erpapi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\appsettings.json",
+              "RelativeToolTip": "erpapi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-24T12:04:05.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CreateModuleCartRequest.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\Contracts\\CreateModuleCartRequest.cs",
               "RelativeDocumentMoniker": "erpapi\\Contracts\\CreateModuleCartRequest.cs",
@@ -67,20 +100,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\Program.cs",
               "RelativeDocumentMoniker": "erpapi\\Program.cs",
               "ToolTip": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\erpapi\\Program.cs",
               "RelativeToolTip": "erpapi\\Program.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAswJwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAswIoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-24T09:47:38.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "20250824092759_SyncModuleCart_Model.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Migrations\\20250824092759_SyncModuleCart_Model.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20250824092759_SyncModuleCart_Model.cs",
@@ -93,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "20250824084654_AddModuleCartOnly.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\Migrations\\20250824084654_AddModuleCartOnly.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20250824084654_AddModuleCartOnly.cs",
@@ -106,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ModuleCart.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Entities\\Models\\ModuleCart.cs",
               "RelativeDocumentMoniker": "Entities\\Models\\ModuleCart.cs",
@@ -119,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RepositoryContext.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\RepositoryContext.cs",
               "RelativeDocumentMoniker": "Repository\\RepositoryContext.cs",
@@ -132,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ModuleCartRepository.cs",
               "DocumentMoniker": "C:\\Users\\Ayhan\\Desktop\\erp_proje\\Erp_sistemi1\\backend\\Repository\\ModuleCartRepository.cs",
               "RelativeDocumentMoniker": "Repository\\ModuleCartRepository.cs",
@@ -149,7 +182,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
@@ -157,7 +190,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "Name": "ST:4:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         },

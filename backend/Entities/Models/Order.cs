@@ -4,14 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.Models
 {
-    public enum PaymentMethod
-    {
-        Cash,
-        CreditCard,
-        BankTransfer,
-        EFT
-    }
-
     public enum OrderStatus
     {
         Pending,
@@ -37,6 +29,7 @@ namespace Entities.Models
         // Teslim tarihi daha sonra belli olabilir -> nullable
         public DateTime? DeliveryDate { get; set; }
 
+        // PaymentMethod enum'ı Entities.Models içindeyse aşağıdaki kullanım doğrudur
         public PaymentMethod PaymentMethod { get; set; } = PaymentMethod.Cash;
 
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
@@ -47,4 +40,3 @@ namespace Entities.Models
         // public ICollection<OrderItem>? Items { get; set; }
     }
 }
-
